@@ -1,0 +1,56 @@
+﻿@page "/editTask"
+@using Microsoft.AspNetCore.Components
+
+<PageTitle>Edit Task</PageTitle>
+
+<h1>Editor</h1>
+
+
+<EditForm Model="@task" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label for="title">Title:</label>
+        <InputText id="title" @bind-Value="task.Title" class="form-control" />
+    </div>
+
+    <div>
+        <label for="description">Description:</label>
+        <InputTextArea id="description" @bind-Value="task.Description" class="form-control" />
+    </div>
+
+    <div>
+        <label for="dueDate">Due Date:</label>
+        <InputDate id="dueDate" @bind-Value="task.DueDate" class="form-control" />
+    </div>
+
+    <div>
+        <label for="priority">Priority:</label>
+        <InputNumber id="priority" @bind-Value="task.Priority" class="form-control" />
+    </div>
+    <div>
+        <label for="status">Status:</label>
+        <InputText id="status" @bind-Value="task.Status" class="form-control" />
+    </div>
+    <br />
+    <input type="submit" class="btn btn-primary" value="Add Task" />
+</EditForm>
+
+@code {
+    private TaskModel task = new TaskModel();
+
+    private void HandleValidSubmit()
+    {
+        // Logic to handle the submitted task
+    }
+
+    public class TaskModel
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public DateTime DueDate { get; set; }
+        public int Priority { get; set; }
+        public string Status { get; set; }
+    }
+}

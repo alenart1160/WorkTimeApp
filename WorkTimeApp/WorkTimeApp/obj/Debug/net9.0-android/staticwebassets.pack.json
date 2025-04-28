@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp/obj/Debug/net9.0-android/scopedcss/bundle/WorkTimeApp.styles.css",
+      "PackagePath": "staticwebassets/WorkTimeApp.styles.css"
+    },
+    {
+      "Id": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net9.0-android/staticwebassets/msbuild.WorkTimeApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0-android/staticwebassets/msbuild.WorkTimeApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0-android/staticwebassets/msbuild.build.WorkTimeApp.props",
+      "PackagePath": "build\\WorkTimeApp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0-android/staticwebassets/msbuild.buildMultiTargeting.WorkTimeApp.props",
+      "PackagePath": "buildMultiTargeting\\WorkTimeApp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0-android/staticwebassets/msbuild.buildTransitive.WorkTimeApp.props",
+      "PackagePath": "buildTransitive\\WorkTimeApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

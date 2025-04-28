@@ -1,0 +1,83 @@
+﻿@page "/tasks"
+@using Microsoft.AspNetCore.Components
+
+<PageTitle>Tasks</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="AddTask">Add Task</button>
+@if (tasks.Any())
+{
+    <div class="task-cards">
+        @foreach (Task task in tasks)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@task.TaskName</h5>
+                    <p class="card-text">@task.Description</p>
+                    <p class="card-text"><small class="text-muted">Created: @task.DateTimeCreated</small></p>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No tasks available.</p>
+}
+
+<style>
+    .task-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 18rem;
+        margin: 1rem;
+    }
+
+    .card-body {
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+</style>
+
+@code {
+    private List<Task> tasks = new List<Task>();
+    private int userID = 1; // Example user ID, replace with actual user ID logic
+    private DateTime dateTime = DateTime.Now; // Example date time, replace with actual date time logic
+
+    private void AddTask()
+    {
+        Task newTask = new Task("New Task", userID, dateTime) { TaskName = "New Task" };
+        tasks.Add(newTask);
+    }
+
+
+    public class Task
+    {
+        public required string TaskName { get; set; }
+        public string? Description { get; set; }
+        public DateTime DateTimeCreated { get; set; }
+        public float TimePassed { get; set; }
+        public int UserID { get; set; }
+        public Task(string taskName, int userID, DateTime dateTime)
+        {
+            this.TaskName = taskName;
+            this.UserID = userID;
+            this.DateTimeCreated = dateTime;
+
+        }
+
+
+    }
+    private int currentCount = 0;
+
+
+
+}

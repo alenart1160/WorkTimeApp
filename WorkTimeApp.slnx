@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/WorkTimeApp/">
+    <Project Path="WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj" />
+    <Project Path="WorkTimeApp/WorkTimeApp.Web/WorkTimeApp.Web.csproj" />
+    <Project Path="WorkTimeApp/WorkTimeApp/WorkTimeApp.csproj" />
+  </Folder>
+</Solution>
