@@ -369,5 +369,6 @@ FodyWeavers.xsd
 WorkTimeApp/WorkTimeApp/bin/Debug/net9.0-android/WorkTimeApp.dll
 WorkTimeApp/WorkTimeApp/bin/Debug/
 /WorkTimeApp/WorkTimeApp/obj/Debug/net9.0-android/
-
-/WorkTimeApp/WorkTimeApp/obj/Debug/net9.0-android/staticwebassets.references.upToDateCheck.txt
+net9.0-android/
+/WorkTimeApp/WorkTimeApp.Web/obj/Debug/
+/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/
