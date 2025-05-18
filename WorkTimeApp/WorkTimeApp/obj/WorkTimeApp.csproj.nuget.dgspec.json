@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp/WorkTimeApp.csproj": {}
+    "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.csproj": {}
   },
   "projects": {
-    "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj": {
+    "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj",
         "projectName": "WorkTimeApp.Shared",
-        "projectPath": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj",
-        "packagesPath": "/Users/arkadiusz/.nuget/packages/",
-        "outputPath": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/",
+        "projectPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\arkad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/arkadiusz/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\arkad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,54 +72,69 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp/WorkTimeApp.csproj": {
+    "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp/WorkTimeApp.csproj",
+        "projectUniqueName": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.csproj",
         "projectName": "WorkTimeApp",
-        "projectPath": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp/WorkTimeApp.csproj",
-        "packagesPath": "/Users/arkadiusz/.nuget/packages/",
-        "outputPath": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp/obj/",
+        "projectPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.csproj",
+        "packagesPath": "C:\\Users\\arkad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/arkadiusz/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\arkad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0-android",
           "net9.0-ios",
-          "net9.0-maccatalyst"
+          "net9.0-maccatalyst",
+          "net9.0-windows10.0.19041.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0-android35.0": {
             "targetAlias": "net9.0-android",
             "projectReferences": {
-              "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj": {
-                "projectPath": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj"
+              "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj"
               }
             }
           },
-          "net9.0-ios18.4": {
+          "net9.0-ios18.2": {
             "targetAlias": "net9.0-ios",
             "projectReferences": {
-              "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj": {
-                "projectPath": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj"
+              "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj"
               }
             }
           },
-          "net9.0-maccatalyst18.4": {
+          "net9.0-maccatalyst18.2": {
             "targetAlias": "net9.0-maccatalyst",
             "projectReferences": {
-              "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj": {
-                "projectPath": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj"
+              "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj"
+              }
+            }
+          },
+          "net9.0-windows10.0.19041": {
+            "targetAlias": "net9.0-windows10.0.19041.0",
+            "projectReferences": {
+              "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\WorkTimeApp.Shared.csproj"
               }
             }
           }
@@ -172,9 +193,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         },
-        "net9.0-ios18.4": {
+        "net9.0-ios18.2": {
           "targetAlias": "net9.0-ios",
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
@@ -215,9 +236,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         },
-        "net9.0-maccatalyst18.4": {
+        "net9.0-maccatalyst18.2": {
           "targetAlias": "net9.0-maccatalyst",
           "dependencies": {
             "Microsoft.AspNetCore.Components.WebView.Maui": {
@@ -259,7 +280,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        },
+        "net9.0-windows10.0.19041": {
+          "targetAlias": "net9.0-windows10.0.19041.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebView.Maui": {
+              "target": "Package",
+              "version": "[9.0.14, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Maui.Controls": {
+              "target": "Package",
+              "version": "[9.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Windows.SDK.NET.Ref.Windows": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -269,10 +327,13 @@
         "android-x64": {
           "#import": []
         },
-        "iossimulator-arm64": {
+        "iossimulator-x64": {
           "#import": []
         },
-        "maccatalyst-arm64": {
+        "maccatalyst-x64": {
+          "#import": []
+        },
+        "win10-x64": {
           "#import": []
         }
       }
