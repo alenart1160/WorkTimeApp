@@ -1,17 +1,20 @@
 ﻿@page "/tasks"
+@page "/tasks/{userid}"
+@inject NavigationManager Navigation
+
 @using Microsoft.AspNetCore.Components
 
 <PageTitle>Tasks</PageTitle>
 
-<h1>Counter</h1>
+<h1>Tasks</h1>
 
-<p role="status">Current count: @currentCount</p>
+<p role="status">Current active tasks: @tasks.Count(t => !t.Completed)</p>
 
 <button class="btn btn-primary" @onclick="AddTask">Add Task</button>
 @if (tasks.Any())
 {
     <div class="task-cards">
-        @foreach (Task task in tasks)
+        @foreach (TasksModel task in tasks)
         {
             <div class="card">
                 <div class="card-body">
@@ -30,43 +33,49 @@ else
 
 <style>
     .task-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     }
 
     .card {
-        width: 18rem;
-        margin: 1rem;
+    width: 18rem;
+    margin: 1rem;
     }
 
     .card-body {
-        background-color: #f8f9fa;
-        border-radius: 0.5rem;
-        padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1rem;
     }
 </style>
 
 @code {
-    private List<Task> tasks = new List<Task>();
-    private int userID = 1; // Example user ID, replace with actual user ID logic
-    private DateTime dateTime = DateTime.Now; // Example date time, replace with actual date time logic
+    [Parameter]
+    public string Userid { get; set; } 
 
+
+    private List<TasksModel> tasks = new List<TasksModel>();
+ // Example user ID, replace with actual user ID logic
+    private DateTime dateTime = DateTime.Now; // Example date time, replace with actual date time logic
     private void AddTask()
     {
-        Task newTask = new Task("New Task", userID, dateTime) { TaskName = "New Task" };
-        tasks.Add(newTask);
+         string userIDTEST = Userid;
+        // TasksModel newTask = new TasksModel("New Task", Int32.Parse(Userid), dateTime) { TaskName = "New Task", Completed = false };
+        // tasks.Add(newTask);
+        Navigation.NavigateTo("addTask/" + Userid);
     }
 
 
-    public class Task
+    public class TasksModel
     {
         public required string TaskName { get; set; }
+        public int UserID { get; set; }
         public string? Description { get; set; }
         public DateTime DateTimeCreated { get; set; }
         public float TimePassed { get; set; }
-        public int UserID { get; set; }
-        public Task(string taskName, int userID, DateTime dateTime)
+        public bool Completed { get; set; }
+        public TasksModel(string taskName, int userID, DateTime dateTime)
         {
             this.TaskName = taskName;
             this.UserID = userID;

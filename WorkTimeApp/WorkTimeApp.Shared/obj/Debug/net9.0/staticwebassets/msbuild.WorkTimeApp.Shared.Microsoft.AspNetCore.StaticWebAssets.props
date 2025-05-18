@@ -72,23 +72,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\WorkTimeApp.Shared.06pr3je63p.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\WorkTimeApp.Shared.v4s2fc0jg2.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>WorkTimeApp.Shared</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/WorkTimeApp.Shared</BasePath>
-      <RelativePath>WorkTimeApp.Shared.06pr3je63p.bundle.scp.css</RelativePath>
+      <RelativePath>WorkTimeApp.Shared.v4s2fc0jg2.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>06pr3je63p</Fingerprint>
-      <Integrity>KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=</Integrity>
+      <Fingerprint>v4s2fc0jg2</Fingerprint>
+      <Integrity>ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\WorkTimeApp.Shared.06pr3je63p.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\WorkTimeApp.Shared.v4s2fc0jg2.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

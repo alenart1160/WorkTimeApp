@@ -1,51 +1,88 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
 @using WorkTimeApp.Shared.Services
 @using Microsoft.AspNetCore.Components
-@inject IFormFactor FormFactor
+@using System.Net.Http.Headers
+@using System.Net.Http.Json
+@using WorkTimeApp.Shared.Model
+
+@inject NavigationManager Navigation
+
 
 <PageTitle>Home</PageTitle>
 
 <h1>WorkTime App</h1>
-<div>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column;">
     <a>@errorMessage</a>
-    <form method="post" @onsubmit="Submit">
-        <label>email</label><br>
-        <input @bind="email" type="email" /><br>
-        <label>password</label><br>
-        <input @bind="password" type="password" /><br>
-        <input type="submit" value="Login" />
-    </form>
-    <p>Forget your password?</p>
-    <p>Sign in</p>
+    <form method="post" @onsubmit="Submit" style="text-align: center;">
+        <label>Login</label><br />
+        <input @bind="Email" type="email" /><br />
+        <label>Password</label><br />
+        <input @bind="Password" type="password" /><br /><br />
+        <div> 
+            <input type="submit" class="btn btn-primary" asp-page="/tasks" value="Login" />
+        </div>
+    </form><br />
+    <button @onclick="NavigateToResetPassword" class="btn btn-secondary">Forget your password?</button><br />
+
+    <button @onclick="NavigateToSignIn" class="btn btn-secondary">Sign in</button><br />
+
 
 </div>
-@code {
-    private string factor => FormFactor.GetFormFactor();
-    private string platform => FormFactor.GetPlatform();
 
-    private string? email { get; set; }
-    private string? password { get; set; }
+@code {
+
+    static HttpClient httpClient = new HttpClient();
+
+    private string? Email { get; set; }
+    private string? Password { get; set; }
     private string? errorMessage { get; set; }
     private async Task Submit()
     {
-        if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+        if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
         {
 
             errorMessage = "Email and password are required.";
             return;
         }
-        if (!email.Contains("@") || !email.Contains("."))
+        if (!Email.Contains("@") || !Email.Contains("."))
         {
-            errorMessage = "Invalid email format.";
+            errorMessage = "Invalid Email format.";
             return;
         }
         else
         {
             errorMessage = null;
         }
-        await Task.Delay(100); // Simulate a delay for the login process
+        // Create a new user
+        UserModel user = new UserModel()
+            {
+                Password = Password,
+                Email = Email,
+                Login = Email
+            };
+        var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/login", user);
+        var request = response.StatusCode;
 
+        string data = await response.Content.ReadAsStringAsync();
+        user.Id = Convert.ToInt64(data);
+        if(response.StatusCode == System.Net.HttpStatusCode.NotFound){
+            errorMessage ="No user found";
+       }
+       else if(response.StatusCode == System.Net.HttpStatusCode.OK ){
+            errorMessage ="";
+            Navigation.NavigateTo($"tasks/{user.Id}" );
+        
+       }
+       else{
+        errorMessage = "Error"+ response.ReasonPhrase;
+       }
     }
+
+    private void NavigateToResetPassword() => Navigation.NavigateTo("resetPassword");
+    private void NavigateToSignIn() => Navigation.NavigateTo("createAccount");
+
+
 
 
 }

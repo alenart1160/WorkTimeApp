@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W7yGKBbAACi3tZIpikizXbhvaQhWmH354JtxkKkdYQE=",
+  "Hash": "9fdVCLC+C1lV2AQxGlO0mHr6doXnyahpBgJrbtjLVRE=",
   "Source": "WorkTimeApp.Shared",
   "BasePath": "_content/WorkTimeApp.Shared",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "WorkTimeApp.Shared/wwwroot",
+      "Name": "WorkTimeApp.Shared\\wwwroot",
       "Source": "WorkTimeApp.Shared",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/9ton9j637p-da95v2qkru.gz",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\9ton9j637p-da95v2qkru.gz",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "app#[.{fingerprint=da95v2qkru}]?.css.gz",
       "AssetKind": "All",
@@ -28,20 +28,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/app.css",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\app.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "2quzq43zhk",
-      "Integrity": "SmB/xrHYXEMFCOEhzpUc/Gz6ZFQ0UJ6bVCyvpnFxhI0=",
+      "Fingerprint": "7xjk2sttc7",
+      "Integrity": "JRyqIbPYDuOeC5nJOM3956s9Uhd3UVgWOSEBUePgnxc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/app.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\app.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/e5tskt3qfk-6gzpyzhau4.gz",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\e5tskt3qfk-6gzpyzhau4.gz",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint=6gzpyzhau4}]?.css.gz",
       "AssetKind": "All",
@@ -49,20 +49,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "cgoy1mia33",
-      "Integrity": "tPYWjXj9L/S5BdHc4ZBRoFSS52tSuxE25ck3Juj3XTc=",
+      "Fingerprint": "joqzyw7ssu",
+      "Integrity": "LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/eeq8rcm8hd-8inm30yfxf.gz",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\eeq8rcm8hd-8inm30yfxf.gz",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint=8inm30yfxf}]?.map.gz",
       "AssetKind": "All",
@@ -70,41 +70,41 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css.map",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "a5iolpc9xz",
-      "Integrity": "3qo3UHtt1eBcfATKJXtIrY+ZdPuBA21DhCoR49jAwbE=",
+      "Fingerprint": "fbl5ivwo6k",
+      "Integrity": "Kym5HpgDYV8Caci50HDUPG6WCQ6nTP+8hy429w+zHVU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css.map"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/kqzvfr4wgn-06pr3je63p.gz",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\kqzvfr4wgn-v4s2fc0jg2.gz",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WorkTimeApp.Shared",
-      "RelativePath": "WorkTimeApp.Shared#[.{fingerprint=06pr3je63p}]?.styles.css.gz",
+      "RelativePath": "WorkTimeApp.Shared#[.{fingerprint=v4s2fc0jg2}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/WorkTimeApp.Shared.styles.css",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkTimeApp.Shared.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "glvh7xwe7k",
-      "Integrity": "zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=",
+      "Fingerprint": "1j031bps7j",
+      "Integrity": "k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/WorkTimeApp.Shared.styles.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkTimeApp.Shared.styles.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/9ton9j637p-da95v2qkru.br",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\9ton9j637p-da95v2qkru.br",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "app#[.{fingerprint=da95v2qkru}]?.css.br",
       "AssetKind": "All",
@@ -112,20 +112,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/app.css",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\app.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
       "Fingerprint": "9mqv5xoish",
       "Integrity": "geF/MS0+gNluNrPIl/EEXn78BLEax6Px8CXeNIu/ehM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/app.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\app.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/e5tskt3qfk-6gzpyzhau4.br",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\e5tskt3qfk-6gzpyzhau4.br",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint=6gzpyzhau4}]?.css.br",
       "AssetKind": "All",
@@ -133,20 +133,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
       "Fingerprint": "2o883p7o84",
       "Integrity": "4jR0OWxmfzUr920AK8Yzn3GjSgWqtt7AtQDXrJ9OWmA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/eeq8rcm8hd-8inm30yfxf.br",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\eeq8rcm8hd-8inm30yfxf.br",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint=8inm30yfxf}]?.map.br",
       "AssetKind": "All",
@@ -154,83 +154,83 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css.map",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
       "Fingerprint": "b4a1wrn6r6",
       "Integrity": "e0W3cltN7F1+gW+ilWd1J4N1PyvYvfyn8Js6/fJEqb0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css.map"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/kqzvfr4wgn-06pr3je63p.br",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\kqzvfr4wgn-v4s2fc0jg2.br",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\",
       "BasePath": "_content/WorkTimeApp.Shared",
-      "RelativePath": "WorkTimeApp.Shared#[.{fingerprint=06pr3je63p}]?.styles.css.br",
+      "RelativePath": "WorkTimeApp.Shared#[.{fingerprint=v4s2fc0jg2}]?.styles.css.br",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/WorkTimeApp.Shared.styles.css",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkTimeApp.Shared.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "y495nxniiq",
-      "Integrity": "frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=",
+      "Fingerprint": "7e45l7enhf",
+      "Integrity": "gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/WorkTimeApp.Shared.styles.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkTimeApp.Shared.styles.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/xylqwk4fw0-06pr3je63p.br",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\xylqwk4fw0-v4s2fc0jg2.br",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\",
       "BasePath": "_content/WorkTimeApp.Shared",
-      "RelativePath": "WorkTimeApp.Shared#[.{fingerprint=06pr3je63p}]!.bundle.scp.css.br",
+      "RelativePath": "WorkTimeApp.Shared#[.{fingerprint=v4s2fc0jg2}]!.bundle.scp.css.br",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/WorkTimeApp.Shared.bundle.scp.css",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkTimeApp.Shared.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "y495nxniiq",
-      "Integrity": "frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=",
+      "Fingerprint": "7e45l7enhf",
+      "Integrity": "gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/WorkTimeApp.Shared.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkTimeApp.Shared.bundle.scp.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/xylqwk4fw0-06pr3je63p.gz",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\xylqwk4fw0-v4s2fc0jg2.gz",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WorkTimeApp.Shared",
-      "RelativePath": "WorkTimeApp.Shared#[.{fingerprint=06pr3je63p}]!.bundle.scp.css.gz",
+      "RelativePath": "WorkTimeApp.Shared#[.{fingerprint=v4s2fc0jg2}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/WorkTimeApp.Shared.bundle.scp.css",
+      "RelatedAsset": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkTimeApp.Shared.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "glvh7xwe7k",
-      "Integrity": "zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=",
+      "Fingerprint": "1j031bps7j",
+      "Integrity": "k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/WorkTimeApp.Shared.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkTimeApp.Shared.bundle.scp.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/WorkTimeApp.Shared.styles.css",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkTimeApp.Shared.styles.css",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "WorkTimeApp.Shared#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -241,17 +241,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "06pr3je63p",
-      "Integrity": "KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=",
+      "Fingerprint": "v4s2fc0jg2",
+      "Integrity": "ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/WorkTimeApp.Shared.styles.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkTimeApp.Shared.styles.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/WorkTimeApp.Shared.bundle.scp.css",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkTimeApp.Shared.bundle.scp.css",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "WorkTimeApp.Shared#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -262,17 +262,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "06pr3je63p",
-      "Integrity": "KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=",
+      "Fingerprint": "v4s2fc0jg2",
+      "Integrity": "ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/WorkTimeApp.Shared.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkTimeApp.Shared.bundle.scp.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/app.css",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\app.css",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -287,13 +287,13 @@
       "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/app.css"
+      "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -308,13 +308,13 @@
       "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -329,13 +329,13 @@
       "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/favicon.png",
+      "Identity": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\favicon.png",
       "SourceId": "WorkTimeApp.Shared",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/",
+      "ContentRoot": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\",
       "BasePath": "_content/WorkTimeApp.Shared",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -350,18 +350,18 @@
       "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.png"
+      "OriginalItemSpec": "wwwroot\\favicon.png"
     }
   ],
   "Endpoints": [
     {
       "Route": "app.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/9ton9j637p-da95v2qkru.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\9ton9j637p-da95v2qkru.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000674763833"
+          "Quality": "0.000693000693"
         }
       ],
       "ResponseHeaders": [
@@ -371,15 +371,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1481"
+          "Value": "1442"
         },
         {
           "Name": "ETag",
-          "Value": "\"SmB/xrHYXEMFCOEhzpUc/Gz6ZFQ0UJ6bVCyvpnFxhI0=\""
+          "Value": "\"JRyqIbPYDuOeC5nJOM3956s9Uhd3UVgWOSEBUePgnxc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -411,7 +411,7 @@
     },
     {
       "Route": "app.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/9ton9j637p-da95v2qkru.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\9ton9j637p-da95v2qkru.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -434,7 +434,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -466,7 +466,7 @@
     },
     {
       "Route": "app.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/app.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -487,7 +487,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -503,7 +503,7 @@
     },
     {
       "Route": "app.css.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/9ton9j637p-da95v2qkru.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\9ton9j637p-da95v2qkru.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -524,7 +524,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -548,7 +548,7 @@
     },
     {
       "Route": "app.css.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/9ton9j637p-da95v2qkru.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\9ton9j637p-da95v2qkru.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -557,7 +557,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1481"
+          "Value": "1442"
         },
         {
           "Name": "Content-Type",
@@ -565,11 +565,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SmB/xrHYXEMFCOEhzpUc/Gz6ZFQ0UJ6bVCyvpnFxhI0=\""
+          "Value": "\"JRyqIbPYDuOeC5nJOM3956s9Uhd3UVgWOSEBUePgnxc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -587,18 +587,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SmB/xrHYXEMFCOEhzpUc/Gz6ZFQ0UJ6bVCyvpnFxhI0="
+          "Value": "sha256-JRyqIbPYDuOeC5nJOM3956s9Uhd3UVgWOSEBUePgnxc="
         }
       ]
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/9ton9j637p-da95v2qkru.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\9ton9j637p-da95v2qkru.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000674763833"
+          "Quality": "0.000693000693"
         }
       ],
       "ResponseHeaders": [
@@ -608,15 +608,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1481"
+          "Value": "1442"
         },
         {
           "Name": "ETag",
-          "Value": "\"SmB/xrHYXEMFCOEhzpUc/Gz6ZFQ0UJ6bVCyvpnFxhI0=\""
+          "Value": "\"JRyqIbPYDuOeC5nJOM3956s9Uhd3UVgWOSEBUePgnxc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -656,7 +656,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/9ton9j637p-da95v2qkru.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\9ton9j637p-da95v2qkru.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -679,7 +679,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -719,7 +719,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/app.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -740,7 +740,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -764,7 +764,7 @@
     },
     {
       "Route": "app.da95v2qkru.css.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/9ton9j637p-da95v2qkru.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\9ton9j637p-da95v2qkru.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -785,7 +785,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -817,7 +817,7 @@
     },
     {
       "Route": "app.da95v2qkru.css.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/9ton9j637p-da95v2qkru.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\9ton9j637p-da95v2qkru.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -826,7 +826,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1481"
+          "Value": "1442"
         },
         {
           "Name": "Content-Type",
@@ -834,11 +834,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SmB/xrHYXEMFCOEhzpUc/Gz6ZFQ0UJ6bVCyvpnFxhI0=\""
+          "Value": "\"JRyqIbPYDuOeC5nJOM3956s9Uhd3UVgWOSEBUePgnxc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -864,18 +864,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SmB/xrHYXEMFCOEhzpUc/Gz6ZFQ0UJ6bVCyvpnFxhI0="
+          "Value": "sha256-JRyqIbPYDuOeC5nJOM3956s9Uhd3UVgWOSEBUePgnxc="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/e5tskt3qfk-6gzpyzhau4.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\e5tskt3qfk-6gzpyzhau4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000041912905"
+          "Quality": "0.000041844506"
         }
       ],
       "ResponseHeaders": [
@@ -885,15 +885,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23858"
+          "Value": "23897"
         },
         {
           "Name": "ETag",
-          "Value": "\"tPYWjXj9L/S5BdHc4ZBRoFSS52tSuxE25ck3Juj3XTc=\""
+          "Value": "\"LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -933,7 +933,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/e5tskt3qfk-6gzpyzhau4.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\e5tskt3qfk-6gzpyzhau4.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -956,7 +956,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -996,7 +996,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1017,7 +1017,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1041,7 +1041,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/e5tskt3qfk-6gzpyzhau4.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\e5tskt3qfk-6gzpyzhau4.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1062,7 +1062,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1094,7 +1094,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/e5tskt3qfk-6gzpyzhau4.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\e5tskt3qfk-6gzpyzhau4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1103,7 +1103,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23858"
+          "Value": "23897"
         },
         {
           "Name": "Content-Type",
@@ -1111,11 +1111,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tPYWjXj9L/S5BdHc4ZBRoFSS52tSuxE25ck3Juj3XTc=\""
+          "Value": "\"LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1141,18 +1141,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-tPYWjXj9L/S5BdHc4ZBRoFSS52tSuxE25ck3Juj3XTc="
+          "Value": "sha256-LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/e5tskt3qfk-6gzpyzhau4.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\e5tskt3qfk-6gzpyzhau4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000041912905"
+          "Quality": "0.000041844506"
         }
       ],
       "ResponseHeaders": [
@@ -1162,15 +1162,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23858"
+          "Value": "23897"
         },
         {
           "Name": "ETag",
-          "Value": "\"tPYWjXj9L/S5BdHc4ZBRoFSS52tSuxE25ck3Juj3XTc=\""
+          "Value": "\"LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1202,7 +1202,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/e5tskt3qfk-6gzpyzhau4.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\e5tskt3qfk-6gzpyzhau4.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1225,7 +1225,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1257,7 +1257,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1278,7 +1278,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1294,12 +1294,12 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/eeq8rcm8hd-8inm30yfxf.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\eeq8rcm8hd-8inm30yfxf.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000013397104"
+          "Quality": "0.000013350065"
         }
       ],
       "ResponseHeaders": [
@@ -1309,15 +1309,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "74642"
+          "Value": "74905"
         },
         {
           "Name": "ETag",
-          "Value": "\"3qo3UHtt1eBcfATKJXtIrY+ZdPuBA21DhCoR49jAwbE=\""
+          "Value": "\"Kym5HpgDYV8Caci50HDUPG6WCQ6nTP+8hy429w+zHVU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1357,7 +1357,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/eeq8rcm8hd-8inm30yfxf.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\eeq8rcm8hd-8inm30yfxf.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1380,7 +1380,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1420,7 +1420,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1441,7 +1441,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1465,7 +1465,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/eeq8rcm8hd-8inm30yfxf.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\eeq8rcm8hd-8inm30yfxf.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1486,7 +1486,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1518,7 +1518,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/eeq8rcm8hd-8inm30yfxf.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\eeq8rcm8hd-8inm30yfxf.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1527,7 +1527,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "74642"
+          "Value": "74905"
         },
         {
           "Name": "Content-Type",
@@ -1535,11 +1535,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3qo3UHtt1eBcfATKJXtIrY+ZdPuBA21DhCoR49jAwbE=\""
+          "Value": "\"Kym5HpgDYV8Caci50HDUPG6WCQ6nTP+8hy429w+zHVU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1565,13 +1565,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3qo3UHtt1eBcfATKJXtIrY+ZdPuBA21DhCoR49jAwbE="
+          "Value": "sha256-Kym5HpgDYV8Caci50HDUPG6WCQ6nTP+8hy429w+zHVU="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.css.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/e5tskt3qfk-6gzpyzhau4.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\e5tskt3qfk-6gzpyzhau4.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1592,7 +1592,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1616,7 +1616,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/e5tskt3qfk-6gzpyzhau4.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\e5tskt3qfk-6gzpyzhau4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1625,7 +1625,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "23858"
+          "Value": "23897"
         },
         {
           "Name": "Content-Type",
@@ -1633,11 +1633,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tPYWjXj9L/S5BdHc4ZBRoFSS52tSuxE25ck3Juj3XTc=\""
+          "Value": "\"LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1655,18 +1655,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tPYWjXj9L/S5BdHc4ZBRoFSS52tSuxE25ck3Juj3XTc="
+          "Value": "sha256-LTxu1aeZz5yJTTAB+DiLnn5XOMdK1oiypNP/4JaeK9c="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/eeq8rcm8hd-8inm30yfxf.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\eeq8rcm8hd-8inm30yfxf.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000013397104"
+          "Quality": "0.000013350065"
         }
       ],
       "ResponseHeaders": [
@@ -1676,15 +1676,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "74642"
+          "Value": "74905"
         },
         {
           "Name": "ETag",
-          "Value": "\"3qo3UHtt1eBcfATKJXtIrY+ZdPuBA21DhCoR49jAwbE=\""
+          "Value": "\"Kym5HpgDYV8Caci50HDUPG6WCQ6nTP+8hy429w+zHVU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1716,7 +1716,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/eeq8rcm8hd-8inm30yfxf.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\eeq8rcm8hd-8inm30yfxf.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1739,7 +1739,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1771,7 +1771,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1792,7 +1792,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1808,7 +1808,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/eeq8rcm8hd-8inm30yfxf.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\eeq8rcm8hd-8inm30yfxf.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1829,7 +1829,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1853,7 +1853,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/eeq8rcm8hd-8inm30yfxf.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\eeq8rcm8hd-8inm30yfxf.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1862,7 +1862,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "74642"
+          "Value": "74905"
         },
         {
           "Name": "Content-Type",
@@ -1870,11 +1870,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3qo3UHtt1eBcfATKJXtIrY+ZdPuBA21DhCoR49jAwbE=\""
+          "Value": "\"Kym5HpgDYV8Caci50HDUPG6WCQ6nTP+8hy429w+zHVU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1892,13 +1892,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3qo3UHtt1eBcfATKJXtIrY+ZdPuBA21DhCoR49jAwbE="
+          "Value": "sha256-Kym5HpgDYV8Caci50HDUPG6WCQ6nTP+8hy429w+zHVU="
         }
       ]
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/favicon.png",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1919,7 +1919,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1943,7 +1943,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/wwwroot/favicon.png",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1964,7 +1964,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:35:55 GMT"
+          "Value": "Mon, 28 Apr 2025 19:12:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1979,13 +1979,13 @@
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.bundle.scp.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/xylqwk4fw0-06pr3je63p.br",
+      "Route": "WorkTimeApp.Shared.bundle.scp.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\xylqwk4fw0-v4s2fc0jg2.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000682593857"
+          "Quality": "0.000679809653"
         }
       ],
       "ResponseHeaders": [
@@ -1995,15 +1995,489 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1464"
+          "Value": "1470"
         },
         {
           "Name": "ETag",
-          "Value": "\"frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=\""
+          "Value": "\"gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.bundle.scp.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\xylqwk4fw0-v4s2fc0jg2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000572409845"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1746"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.bundle.scp.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkTimeApp.Shared.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.bundle.scp.css.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\xylqwk4fw0-v4s2fc0jg2.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\xylqwk4fw0-v4s2fc0jg2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1746"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.styles.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\kqzvfr4wgn-v4s2fc0jg2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000572409845"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1746"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.styles.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\kqzvfr4wgn-v4s2fc0jg2.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000679809653"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1470"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.styles.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkTimeApp.Shared.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.styles.css.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\kqzvfr4wgn-v4s2fc0jg2.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.styles.css.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\kqzvfr4wgn-v4s2fc0jg2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1746"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818="
+        }
+      ]
+    },
+    {
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.bundle.scp.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\xylqwk4fw0-v4s2fc0jg2.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000679809653"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1470"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2023,13 +2497,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
+          "Value": "W/\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2037,18 +2511,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.bundle.scp.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/xylqwk4fw0-06pr3je63p.gz",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.bundle.scp.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\xylqwk4fw0-v4s2fc0jg2.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000571755289"
+          "Quality": "0.000572409845"
         }
       ],
       "ResponseHeaders": [
@@ -2058,15 +2532,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1748"
+          "Value": "1746"
         },
         {
           "Name": "ETag",
-          "Value": "\"zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=\""
+          "Value": "\"k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2086,13 +2560,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
+          "Value": "W/\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2100,13 +2574,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.bundle.scp.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/WorkTimeApp.Shared.bundle.scp.css",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.bundle.scp.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WorkTimeApp.Shared.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2115,7 +2589,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5722"
+          "Value": "5926"
         },
         {
           "Name": "Content-Type",
@@ -2123,11 +2597,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
+          "Value": "\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2137,7 +2611,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2145,13 +2619,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.bundle.scp.css.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/xylqwk4fw0-06pr3je63p.br",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.bundle.scp.css.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\xylqwk4fw0-v4s2fc0jg2.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2160,7 +2634,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1464"
+          "Value": "1470"
         },
         {
           "Name": "Content-Type",
@@ -2168,11 +2642,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=\""
+          "Value": "\"gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2190,7 +2664,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2198,13 +2672,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs="
+          "Value": "sha256-gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.bundle.scp.css.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/xylqwk4fw0-06pr3je63p.gz",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\xylqwk4fw0-v4s2fc0jg2.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2213,7 +2687,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1748"
+          "Value": "1746"
         },
         {
           "Name": "Content-Type",
@@ -2221,11 +2695,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=\""
+          "Value": "\"k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2243,7 +2717,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2251,18 +2725,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI="
+          "Value": "sha256-k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.styles.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/kqzvfr4wgn-06pr3je63p.gz",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.styles.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\kqzvfr4wgn-v4s2fc0jg2.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000571755289"
+          "Quality": "0.000572409845"
         }
       ],
       "ResponseHeaders": [
@@ -2272,15 +2746,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1748"
+          "Value": "1746"
         },
         {
           "Name": "ETag",
-          "Value": "\"zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=\""
+          "Value": "\"k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2300,13 +2774,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
+          "Value": "W/\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2314,18 +2788,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.styles.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/kqzvfr4wgn-06pr3je63p.br",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.styles.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\kqzvfr4wgn-v4s2fc0jg2.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000682593857"
+          "Quality": "0.000679809653"
         }
       ],
       "ResponseHeaders": [
@@ -2335,15 +2809,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1464"
+          "Value": "1470"
         },
         {
           "Name": "ETag",
-          "Value": "\"frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=\""
+          "Value": "\"gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2363,13 +2837,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
+          "Value": "W/\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2377,13 +2851,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.styles.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/WorkTimeApp.Shared.styles.css",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.styles.css",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\scopedcss\\bundle\\WorkTimeApp.Shared.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2392,7 +2866,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5722"
+          "Value": "5926"
         },
         {
           "Name": "Content-Type",
@@ -2400,11 +2874,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
+          "Value": "\"ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2414,7 +2888,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2422,13 +2896,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
+          "Value": "sha256-ESbH/Do7L1i4A2WOw1Aw+XJehoLdUGYiQzj23w1A+v4="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.styles.css.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/kqzvfr4wgn-06pr3je63p.br",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.styles.css.br",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\publish\\kqzvfr4wgn-v4s2fc0jg2.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2437,7 +2911,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1464"
+          "Value": "1470"
         },
         {
           "Name": "Content-Type",
@@ -2445,11 +2919,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=\""
+          "Value": "\"gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2467,7 +2941,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2475,13 +2949,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs="
+          "Value": "sha256-gQmgJ16cXrK2eRa0N3Yjln/Bt9MruAH7DEvY/is/rNM="
         }
       ]
     },
     {
-      "Route": "WorkTimeApp.Shared.06pr3je63p.styles.css.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/kqzvfr4wgn-06pr3je63p.gz",
+      "Route": "WorkTimeApp.Shared.v4s2fc0jg2.styles.css.gz",
+      "AssetFile": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp\\WorkTimeApp.Shared\\obj\\Debug\\net9.0\\compressed\\kqzvfr4wgn-v4s2fc0jg2.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2490,7 +2964,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1748"
+          "Value": "1746"
         },
         {
           "Name": "Content-Type",
@@ -2498,11 +2972,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=\""
+          "Value": "\"k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
+          "Value": "Sun, 18 May 2025 12:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2520,7 +2994,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06pr3je63p"
+          "Value": "v4s2fc0jg2"
         },
         {
           "Name": "label",
@@ -2528,481 +3002,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.bundle.scp.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/xylqwk4fw0-06pr3je63p.br",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "br",
-          "Quality": "0.000682593857"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1464"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.bundle.scp.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/xylqwk4fw0-06pr3je63p.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000571755289"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1748"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.bundle.scp.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/projectbundle/WorkTimeApp.Shared.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5722"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.bundle.scp.css.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/xylqwk4fw0-06pr3je63p.br",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1464"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.bundle.scp.css.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/xylqwk4fw0-06pr3je63p.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1748"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.styles.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/kqzvfr4wgn-06pr3je63p.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000571755289"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1748"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.styles.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/kqzvfr4wgn-06pr3je63p.br",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "br",
-          "Quality": "0.000682593857"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1464"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.styles.css",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/scopedcss/bundle/WorkTimeApp.Shared.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5722"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-KCf6LnktKutAi2enA/+dvE7aWvhNwczyGIYSgHjROxE="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.styles.css.br",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/publish/kqzvfr4wgn-06pr3je63p.br",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1464"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-frf6XRrUoP+f2luRfuK2oHJReJOGmM9d+OpmsL0QYVs="
-        }
-      ]
-    },
-    {
-      "Route": "WorkTimeApp.Shared.styles.css.gz",
-      "AssetFile": "/Users/arkadiusz/Documents/Programing/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/compressed/kqzvfr4wgn-06pr3je63p.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1748"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 17:46:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-zDpgQoIBViTiQudGpVxnZkvaRCAy5hoE/O9YdKheZuI="
+          "Value": "sha256-k53UjA/6syOeEBRQWmuZe9eeyoxSkbE5F2SSTDZB818="
         }
       ]
     }

@@ -24,12 +24,20 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVGFzay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/arkad/source/repos/alenart1160/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/Pages/CreateAccount.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlQWNjb3VudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/arkad/source/repos/alenart1160/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/Pages/EditTask.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFRhc2sucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/arkad/source/repos/alenart1160/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/arkad/source/repos/alenart1160/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/Pages/ResetPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXRQYXNzd29yZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/arkad/source/repos/alenart1160/WorkTimeApp/WorkTimeApp/WorkTimeApp.Shared/Pages/Tasks.razor]

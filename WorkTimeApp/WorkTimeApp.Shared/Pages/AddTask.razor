@@ -1,4 +1,9 @@
 ﻿@page "/addTask"
+@page "/addTask/{userid}"
+@inject NavigationManager Navigation
+
+@using Microsoft.AspNetCore.Components.Forms
+@using WorkTimeApp.Shared.Model
 
 <PageTitle>Add Task</PageTitle>
 
@@ -37,19 +42,17 @@
 </EditForm>
 
 @code {
+    [Parameter]
+    public string Userid { get; set; }
     private TaskModel task = new TaskModel();
 
-    private void HandleValidSubmit()
-    {
-        // Logic to handle the submitted task
-    }
+    static HttpClient httpClient = new HttpClient();
 
-    public class TaskModel
+    private async void HandleValidSubmit()
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public DateTime DueDate { get; set; }
-        public int Priority { get; set; }
-        public string Status { get; set; }
+        task.UserID = Convert.ToInt64(Userid);
+        var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/api/tasks", task);
+        var responseCode = response;
+
     }
 }
