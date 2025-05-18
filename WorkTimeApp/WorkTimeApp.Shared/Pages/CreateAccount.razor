@@ -1,0 +1,29 @@
+﻿@page "/createAccount"
+
+<PageTitle>CreateAccount</PageTitle>
+
+<h1>CreateAccount</h1>
+<div>
+<a style="color:red;">@ErrorMessage</a>
+<form method="post" @onsubmit="Submit">
+
+
+        <div>
+        <label for="email">Email:</label>
+        <input  id="email"  type="email" @bind="Email" class="form-control" />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" @bind="Password" class="form-control" />
+    </div>
+
+    <div>
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" @bind="ConfirmPassword" class="form-control" />
+    </div><br/>
+
+  
+    <input type="submit" class="btn btn-primary" value="Sign in" />
+</form>
+</div>
+
