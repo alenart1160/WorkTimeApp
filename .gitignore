@@ -366,7 +366,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-WorkTimeApp/WorkTimeApp/bin/Debug/net9.0-android/WorkTimeApp.dll
+
 WorkTimeApp/WorkTimeApp/bin/Debug/
 /WorkTimeApp/WorkTimeApp/obj/Debug/net9.0-android/
 net9.0-android/
