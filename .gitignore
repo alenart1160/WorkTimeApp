@@ -368,4 +368,6 @@ MigrationBackup/
 FodyWeavers.xsd
 WorkTimeApp/WorkTimeApp/bin/Debug/net9.0-android/WorkTimeApp.dll
 WorkTimeApp/WorkTimeApp/bin/Debug/
-/WorkTimeApp/WorkTimeApp/obj/Debug/net9.0-android/staticwebassets.build.json
+/WorkTimeApp/WorkTimeApp/obj/Debug/net9.0-android/
+
+/WorkTimeApp/WorkTimeApp/obj/Debug/net9.0-android/staticwebassets.references.upToDateCheck.txt
