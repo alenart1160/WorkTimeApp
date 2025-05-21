@@ -1,11 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\WorkTimeApp",
-    "\\WorkTimeApp\\WorkTimeApp",
-    "\\WorkTimeApp\\WorkTimeApp.Shared",
-    "\\WorkTimeApp\\WorkTimeApp.Web"
+    ""
   ],
-  "SelectedNode": "\\WorkTimeApp\\WorkTimeApp.Web\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,12 +1,45 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp.slnx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkTimeApp.slnx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkTimeApp.slnx",
+              "DocumentMoniker": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp.slnx",
+              "RelativeDocumentMoniker": "WorkTimeApp.slnx",
+              "ToolTip": "C:\\Users\\arkad\\source\\repos\\alenart1160\\WorkTimeApp\\WorkTimeApp.slnx",
+              "RelativeToolTip": "WorkTimeApp.slnx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-28T19:13:21.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
