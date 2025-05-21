@@ -1,6 +1,12 @@
-﻿@page "/editTask"
+﻿@page "/editTask/{taskid}"
+
+@inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
+
 @using Microsoft.AspNetCore.Components
 @using Microsoft.AspNetCore.Components.Forms
+@using System.Text.Json
+@using WorkTimeApp.Shared.Model
 
 <PageTitle>Edit Task</PageTitle>
 
@@ -13,45 +19,62 @@
 
     <div>
         <label for="title">Title:</label>
-        <InputText id="title" @bind-Value="task.Title" class="form-control" />
+        <InputText id="title" @bind-Value="task.title" class="form-control" />
     </div>
 
     <div>
         <label for="description">Description:</label>
-        <InputTextArea id="description" @bind-Value="task.Description" class="form-control" />
+        <InputTextArea id="description" @bind-Value="task.description" class="form-control" />
     </div>
 
     <div>
         <label for="dueDate">Due Date:</label>
-        <InputDate id="dueDate" @bind-Value="task.DueDate" class="form-control" />
+        <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control" />
     </div>
 
     <div>
         <label for="priority">Priority:</label>
-        <InputNumber id="priority" @bind-Value="task.Priority" class="form-control" />
+        <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
     </div>
     <div>
         <label for="status">Status:</label>
         <InputText id="status" @bind-Value="task.Status" class="form-control" />
     </div>
     <br />
-    <input type="submit" class="btn btn-primary" value="Add Task" />
+    <input type="submit" class="btn btn-primary" value="Edit Task" />
 </EditForm>
+<button class="btn btn-primary" @onclick="GoBack">Go Back</button>
 
 @code {
-    private TaskModel task = new TaskModel();
+    [Parameter]
+    public string Taskid { get; set; } = null!;
 
-    private void HandleValidSubmit()
+    private TaskModel task = new TaskModel();
+    static HttpClient httpClient = new HttpClient();
+
+    protected override async Task OnInitializedAsync()
     {
-        // Logic to handle the submitted task
+        long taskId = Int32.Parse(Taskid);
+        var response = await httpClient.GetStringAsync($"http://10.0.2.2:5076/api/tasks/{taskId}");
+        if (!string.IsNullOrEmpty(response))
+        {
+            var deserializedTask = JsonSerializer.Deserialize<TaskModel>(response);
+            if (deserializedTask != null)
+            {
+                task = deserializedTask;
+            }
+        }
     }
 
-    public class TaskModel
+    private async void HandleValidSubmit()
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public DateTime DueDate { get; set; }
-        public int Priority { get; set; }
-        public string Status { get; set; }
+        await httpClient.PutAsJsonAsync($"http://10.0.2.2:5076/api/tasks/{Taskid}", task);
+        await JSRuntime.InvokeVoidAsync("history.back");
+    }
+
+    private async void GoBack()
+    {
+        await JSRuntime.InvokeVoidAsync("history.back");
     }
 }
+

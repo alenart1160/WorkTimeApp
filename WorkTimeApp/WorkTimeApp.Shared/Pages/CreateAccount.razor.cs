@@ -1,4 +1,3 @@
-using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Net;
@@ -10,11 +9,11 @@ namespace WorkTimeApp.Shared.Pages
 {
     public partial class CreateAccount
     {
-        static HttpClient client = new HttpClient();
+        static HttpClient client = new ();
         private readonly PasswordHasher<UserModel> passwordHasher = new();
 
         public string? Email { get; set; }
-        public string? Password { get; set; }
+        public string Password { get; set; } = null!;
         public string? ConfirmPassword { get; set; }
         public string? ErrorMessage { get; set; }
 

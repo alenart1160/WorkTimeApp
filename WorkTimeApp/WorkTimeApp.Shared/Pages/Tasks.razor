@@ -1,26 +1,31 @@
-﻿@page "/tasks"
-@page "/tasks/{userid}"
+﻿@page "/tasks/{userid}"
 @inject NavigationManager Navigation
 
 @using Microsoft.AspNetCore.Components
+@using System.Text.Json
+@using WorkTimeApp.Shared.Model
 
 <PageTitle>Tasks</PageTitle>
 
 <h1>Tasks</h1>
 
-<p role="status">Current active tasks: @tasks.Count(t => !t.Completed)</p>
+<p role="status">Current active tasks: @tasks.Count(t => !t.completed)</p>
 
 <button class="btn btn-primary" @onclick="AddTask">Add Task</button>
 @if (tasks.Any())
 {
     <div class="task-cards">
-        @foreach (TasksModel task in tasks)
+        @foreach (TaskModel task in tasks)
         {
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">@task.TaskName</h5>
-                    <p class="card-text">@task.Description</p>
-                    <p class="card-text"><small class="text-muted">Created: @task.DateTimeCreated</small></p>
+                    <h5 class="card-title"> @task.title  </h5>
+                    <p class="card-text">@task.description</p>
+                    <p class="card-text"><small class="text-muted">Created: @task.dateTimeCreated</small></p>
+                    <button @onclick="() => EditTask(task.id)">Edit</button>
+                    <button @onclick="() => StartTask(task.id)">Start</button>
+                    <button @onclick="() => StopTask(task.id)">Stop</button>
+                    <button @onclick="() => CompleteTask(task.id)">Complete</button>
                 </div>
             </div>
         }
@@ -33,60 +38,68 @@ else
 
 <style>
     .task-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .card {
-    width: 18rem;
-    margin: 1rem;
+        width: 18rem;
+        margin: 1rem;
     }
 
     .card-body {
-    background-color: #f8f9fa;
-    border-radius: 0.5rem;
-    padding: 1rem;
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+        padding: 1rem;
     }
 </style>
 
 @code {
     [Parameter]
-    public string Userid { get; set; } 
+    public string Userid { get; set; } = null!;
+    static HttpClient httpClient = new HttpClient();
 
 
-    private List<TasksModel> tasks = new List<TasksModel>();
- // Example user ID, replace with actual user ID logic
+    public List<TaskModel> tasks = new List<TaskModel>();
+    // Example user ID, replace with actual user ID logic
     private DateTime dateTime = DateTime.Now; // Example date time, replace with actual date time logic
     private void AddTask()
     {
-         string userIDTEST = Userid;
+
         // TasksModel newTask = new TasksModel("New Task", Int32.Parse(Userid), dateTime) { TaskName = "New Task", Completed = false };
         // tasks.Add(newTask);
         Navigation.NavigateTo("addTask/" + Userid);
     }
 
-
-    public class TasksModel
+    protected override async Task OnInitializedAsync()
     {
-        public required string TaskName { get; set; }
-        public int UserID { get; set; }
-        public string? Description { get; set; }
-        public DateTime DateTimeCreated { get; set; }
-        public float TimePassed { get; set; }
-        public bool Completed { get; set; }
-        public TasksModel(string taskName, int userID, DateTime dateTime)
+        var response = await httpClient.GetStringAsync($"http://10.0.2.2:5076/api/tasks/user/{Userid}");
+        if (!string.IsNullOrEmpty(response))
         {
-            this.TaskName = taskName;
-            this.UserID = userID;
-            this.DateTimeCreated = dateTime;
+            var deserializedTask = JsonSerializer.Deserialize<List<TaskModel>>(response);
+            if (deserializedTask != null)
+            {
+                tasks = deserializedTask;
+            }
 
         }
-
-
     }
-    private int currentCount = 0;
 
-
-
+    private void EditTask(long TaskId)
+    {
+        Navigation.NavigateTo($"editTask/{TaskId}");
+    }
+    private void StartTask(long TaskId)
+    {
+        Navigation.NavigateTo($"editTask/{TaskId}");
+    }
+    private void StopTask(long TaskId)
+    {
+        Navigation.NavigateTo($"editTask/{TaskId}");
+    }
+    private void CompleteTask(long TaskId)
+    {
+        Navigation.NavigateTo($"editTask/{TaskId}");
+    }
 }

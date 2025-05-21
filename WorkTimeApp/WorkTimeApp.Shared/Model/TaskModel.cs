@@ -8,14 +8,17 @@ namespace WorkTimeApp.Shared.Model
 {
     public class TaskModel
     {
-        public long UserID { get; set; }
-        public string Title { get; set; }
-        public DateTime DueDate { get; set; }
-        public int Priority { get; set; }
-        public string? Description { get; set; }
-        public DateTime DateTimeCreated { get; set; }
-        public float TimePassed { get; set; }
-        public string Status { get; set; }
+        public long id { get; set; }
+        public long userID { get; set; }
+        public string? title { get; set; }
+        public DateTime dueDate { get; set; }
+        public int priority { get; set; }
+        public string? description { get; set; }
+        public DateTime dateTimeCreated { get; set; }
+        public float timePassed { get; set; }
+        public string? Status { get; set; }
+        public bool completed { get; set; }
+
 
     }
 }

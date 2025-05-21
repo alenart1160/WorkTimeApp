@@ -1,6 +1,6 @@
-﻿@page "/addTask"
-@page "/addTask/{userid}"
+﻿@page "/addTask/{userid}"
 @inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
 
 @using Microsoft.AspNetCore.Components.Forms
 @using WorkTimeApp.Shared.Model
@@ -16,22 +16,22 @@
 
     <div>
         <label for="title">Title:</label>
-        <InputText id="title" @bind-Value="task.Title" class="form-control" />
+        <InputText id="title" @bind-Value="task.title" class="form-control" />
     </div>
 
     <div>
         <label for="description">Description:</label>
-        <InputTextArea id="description" @bind-Value="task.Description" class="form-control" />
+        <InputTextArea id="description" @bind-Value="task.description" class="form-control" />
     </div>
 
     <div>
         <label for="dueDate">Due Date:</label>
-        <InputDate id="dueDate" @bind-Value="task.DueDate" class="form-control" />
+        <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control"> @DateTime.Now</InputDate>
     </div>
 
     <div>
         <label for="priority">Priority:</label>
-        <InputNumber id="priority" @bind-Value="task.Priority" class="form-control" />
+        <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
     </div>
     <div>
         <label for="status">Status:</label>
@@ -40,19 +40,23 @@
     <br />
     <input type="submit" class="btn btn-primary" value="Add Task" />
 </EditForm>
-
+<button class="btn btn-primary" @onclick="GoBack">Go Back</button>
 @code {
     [Parameter]
-    public string Userid { get; set; }
+    public string Userid { get; set; } = null!;
     private TaskModel task = new TaskModel();
 
     static HttpClient httpClient = new HttpClient();
 
     private async void HandleValidSubmit()
     {
-        task.UserID = Convert.ToInt64(Userid);
+        task.userID = Convert.ToInt64(Userid);
         var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/api/tasks", task);
         var responseCode = response;
 
+    }
+    private async void GoBack()
+    {
+        await JSRuntime.InvokeVoidAsync("history.back");
     }
 }
