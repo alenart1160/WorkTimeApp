@@ -3,6 +3,7 @@ using System;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Threading.Tasks;
 using WorkTimeApp.Shared.Model;
 
 namespace WorkTimeApp.Shared.Pages
@@ -31,7 +32,11 @@ namespace WorkTimeApp.Shared.Pages
 
             }
 
+#if ANDROID
             client.BaseAddress = new Uri("http://10.0.0.2:5076/");
+#else
+            client.BaseAddress = new Uri("http://localhost:5076/");
+#endif
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -47,8 +52,12 @@ namespace WorkTimeApp.Shared.Pages
                 };
                 userModel.Password = passwordHasher.HashPassword(userModel, Password);
                 var httpClient = new HttpClient();
-               // var response = await httpClient.GetAsync("http://10.0.2.2:5076/api/tasks");
+                // var response = await httpClient.GetAsync("http://10.0.2.2:5076/api/tasks");
+#if ANDROID
                 var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/api/users",userModel);
+#else
+                var response = await httpClient.PostAsJsonAsync("http://locallhost:5076/api/users",userModel);
+#endif
                 request = response.StatusCode;
 
                 // var data = await response.Content.ReadAsStringAsync();

@@ -26,7 +26,7 @@
 
     <div>
         <label for="dueDate">Due Date:</label>
-        <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control"> @DateTime.Now</InputDate>
+        <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control"></InputDate>
     </div>
 
     <div>
@@ -44,15 +44,28 @@
 @code {
     [Parameter]
     public string Userid { get; set; } = null!;
-    private TaskModel task = new TaskModel();
+    private TaskModel task = new TaskModel()
+    {
+
+        dueDate = DateTime.Now
+    };
 
     static HttpClient httpClient = new HttpClient();
+    public string dateNow = DateTime.Now.ToString("dd-MM-yyyy");
 
     private async void HandleValidSubmit()
     {
         task.userID = Convert.ToInt64(Userid);
+#if ANDROID
         var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/api/tasks", task);
+#else
+        var response = await httpClient.PostAsJsonAsync("http://localhost:5076/api/tasks", task);
+#endif
+
+        
         var responseCode = response;
+        await JSRuntime.InvokeVoidAsync("history.back");
+
 
     }
     private async void GoBack()

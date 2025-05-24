@@ -74,7 +74,12 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+
+#if ANDROID
         var response = await httpClient.GetStringAsync($"http://10.0.2.2:5076/api/tasks/user/{Userid}");
+#else
+        var response = await httpClient.GetStringAsync($"http://localhost:5076/api/tasks/user/{Userid}");
+#endif
         if (!string.IsNullOrEmpty(response))
         {
             var deserializedTask = JsonSerializer.Deserialize<List<TaskModel>>(response);

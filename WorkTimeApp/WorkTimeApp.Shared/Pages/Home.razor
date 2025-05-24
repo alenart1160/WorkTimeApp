@@ -61,7 +61,12 @@
                 Email = Email,
                 Login = Email
             };
+
+#if ANDROID
         var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/login", user);
+#else
+        var response = await httpClient.PostAsJsonAsync("http://localhost:5076/login", user);
+#endif
         var request = response.StatusCode;
 
         string data = await response.Content.ReadAsStringAsync();
