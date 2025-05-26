@@ -36,12 +36,8 @@
         <label for="priority">Priority:</label>
         <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
     </div>
-    <div>
-        <label for="status">Status:</label>
-        <InputText id="status" @bind-Value="task.Status" class="form-control" />
-    </div>
     <br />
-    <input type="submit" class="btn btn-primary" value="Edit Task" />
+    <input type="submit" class="btn btn-primary" value="Save" />
 </EditForm>
 <button class="btn btn-primary" @onclick="GoBack">Go Back</button>
 

@@ -15,10 +15,17 @@ namespace WorkTimeApp.Shared.Model
         public int priority { get; set; }
         public string? description { get; set; }
         public DateTime dateTimeCreated { get; set; }
-        public float timePassed { get; set; }
-        public string? Status { get; set; }
+        public string? timePassed { get; set; }
+        public  EnumStatus status { get; set; }
         public bool completed { get; set; }
+        public DateTime timeStart { get; set; }
 
 
+    }
+    public enum EnumStatus
+    {
+        InComplete = 0,
+        Active = 1,
+        Completed = 2,
     }
 }

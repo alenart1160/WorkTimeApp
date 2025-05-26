@@ -33,10 +33,6 @@
         <label for="priority">Priority:</label>
         <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
     </div>
-    <div>
-        <label for="status">Status:</label>
-        <InputText id="status" @bind-Value="task.Status" class="form-control" />
-    </div>
     <br />
     <input type="submit" class="btn btn-primary" value="Add Task" />
 </EditForm>
@@ -47,7 +43,9 @@
     private TaskModel task = new TaskModel()
     {
 
-        dueDate = DateTime.Now
+        dueDate = DateTime.Now,
+        dateTimeCreated = DateTime.Now,
+        status = EnumStatus.InComplete
     };
 
     static HttpClient httpClient = new HttpClient();
