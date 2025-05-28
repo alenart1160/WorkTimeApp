@@ -372,3 +372,4 @@ WorkTimeApp/WorkTimeApp/bin/Debug/
 net9.0-android/
 /WorkTimeApp/WorkTimeApp.Web/obj/Debug/
 /WorkTimeApp/WorkTimeApp.Shared/obj/Debug/net9.0/
+/.vs/slnx.sqlite
