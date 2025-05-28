@@ -1,4 +1,7 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@using WorkTimeApp.Shared.Model
+@inject UserModel UserModel
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">WorkTimeApp</a>
     </div>
@@ -9,25 +12,55 @@
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Log out
-            </NavLink>
+            @if (UserModel.Id == 0)
+            {
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                </NavLink>
+                <NavLink class="nav-link" href="createAccount" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Sign in
+                </NavLink>
+            }
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="tasks" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Active
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Completed
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> All
-            </NavLink>
-        </div>
+        @if (UserModel.Id !=0)
+        {
 
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="@("tasks/" + UserModel.Id.ToString())" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Active
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="@("tasks/completed/" + UserModel.Id.ToString())" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Completed
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="@("tasks/all/" + UserModel.Id.ToString())" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> All
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Log out
+                </NavLink>
+            </div>
+        }
     </nav>
 </div>
+@code {
+    protected override void OnInitialized()
+    {
+        UserModel.OnChange += OnAppStateChanged;
+    }
+
+    private async void OnAppStateChanged()
+    {
+        await InvokeAsync(StateHasChanged); // ważne w Blazor Hybrid!
+    }
+
+    public void Dispose()
+    {
+        UserModel.OnChange -= OnAppStateChanged;
+    }
+}

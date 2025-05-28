@@ -1,4 +1,4 @@
-﻿@page "/tasks/{userid}"
+﻿@page "/tasks/all/{userid}"
 @inject NavigationManager Navigation
 
 @using Microsoft.AspNetCore.Components
@@ -9,13 +9,13 @@
 
 <h1>Active Tasks</h1>
 
-<p role="status">Current active tasks: @tasks.Count(t => !t.completed)</p>
+<p role="status">All tasks: @tasks.Count()</p>
 
 <button class="btn btn-primary" @onclick="AddTask">Add Task</button>
 @if (tasks.Any())
 {
     <div class="task-cards">
-        <WorkTimeApp.Shared.Components.TaskList tasks="@tasks" Userid="@Userid" FilterFunc="ActiveFilter"></WorkTimeApp.Shared.Components.TaskList>
+        <WorkTimeApp.Shared.Components.TaskList tasks="@tasks" Userid="@Userid"></WorkTimeApp.Shared.Components.TaskList>
     </div>
 }
 else
@@ -47,7 +47,7 @@ else
     public string Userid { get; set; } = null!;
 
 
-    private bool ActiveFilter(TaskModel task) => !task.completed;
+    //private bool ActiveFilter(TaskModel task) => !task.completed;
     static HttpClient httpClient = new HttpClient();
 
 

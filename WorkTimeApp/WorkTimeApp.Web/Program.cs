@@ -2,6 +2,7 @@ using WorkTimeApp.Web.Components;
 using WorkTimeApp.Shared.Services;
 using WorkTimeApp.Web.Services;
 using System;
+using WorkTimeApp.Shared.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,7 @@ builder.Services.AddRazorComponents()
 // Add device-specific services used by the WorkTimeApp.Shared project
 builder.Services.AddSingleton<IFormFactor, FormFactor>();
 
-
+builder.Services.AddScoped<UserModel>();
 
 var app = builder.Build();
 

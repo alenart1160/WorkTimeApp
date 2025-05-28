@@ -7,7 +7,7 @@
 @using WorkTimeApp.Shared.Model
 
 @inject NavigationManager Navigation
-
+@inject UserModel UserModel
 
 <PageTitle>Home</PageTitle>
 
@@ -19,7 +19,7 @@
         <input @bind="Email" type="email" /><br />
         <label>Password</label><br />
         <input @bind="Password" type="password" /><br /><br />
-        <div> 
+        <div>
             <input type="submit" class="btn btn-primary" asp-page="/tasks" value="Login" />
         </div>
     </form><br />
@@ -32,7 +32,13 @@
 
 @code {
 
-    static HttpClient httpClient = new HttpClient();
+    protected override void OnInitialized()
+    {
+        UserModel.Id = 0;
+    }
+
+
+    static HttpClient httpClient = new();
 
     private string? Email { get; set; }
     private string? Password { get; set; }
@@ -56,11 +62,11 @@
         }
         // Create a new user
         UserModel user = new UserModel()
-            {
-                Password = Password,
-                Email = Email,
-                Login = Email
-            };
+        {
+            Password = Password,
+            Email = Email,
+            Login = Email
+        };
 
 #if ANDROID
         var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/login", user);
@@ -70,18 +76,26 @@
         var request = response.StatusCode;
 
         string data = await response.Content.ReadAsStringAsync();
-        user.Id = Convert.ToInt64(data);
-        if(response.StatusCode == System.Net.HttpStatusCode.NotFound){
-            errorMessage ="No user found";
-       }
-       else if(response.StatusCode == System.Net.HttpStatusCode.OK ){
-            errorMessage ="";
-            Navigation.NavigateTo($"tasks/{user.Id}" );
-        
-       }
-       else{
-        errorMessage = "Error"+ response.ReasonPhrase;
-       }
+        if (request == System.Net.HttpStatusCode.OK)
+        {
+            user.Id = Convert.ToInt64(data);
+            UserModel.Id = user.Id;
+            UserModel = user;
+        }
+        if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            errorMessage = "No user found";
+        }
+        else if (response.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            errorMessage = "";
+            Navigation.NavigateTo($"tasks/{user.Id}");
+
+        }
+        else
+        {
+            errorMessage = "Error" + response.ReasonPhrase;
+        }
     }
 
     private void NavigateToResetPassword() => Navigation.NavigateTo("resetPassword");

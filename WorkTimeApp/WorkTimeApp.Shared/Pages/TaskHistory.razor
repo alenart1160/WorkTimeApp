@@ -1,0 +1,77 @@
+﻿@using WorkTimeApp.Shared.Model  
+@using System.Text.Json
+
+@page "/tasks/history/{taskid:int}"
+@inject NavigationManager Navigation
+
+<PageTitle>History</PageTitle>  
+
+<h1>History</h1>  
+
+@if (TaskTimer != null && TaskTimer.Any())  
+{  
+    <div class="task-cards">  
+        @foreach (TaskTimerModel timer in TaskTimer.OrderByDescending(o => o.DateTimeCreated))  
+        {  
+            <div class="card">  
+                <div class="card-body">  
+                    <h5 class="card-title"> @timer.StartTime  </h5>  
+                    <p class="card-text">@timer.EndTime</p>  
+                </div>  
+            </div>  
+        }  
+    </div>  
+}  
+else  
+{  
+    <p>No tasks available.</p>  
+}  
+
+<style>  
+    .task-cards {  
+        display: flex;  
+        flex-wrap: wrap;  
+        gap: 1rem;  
+    }  
+
+    .card {  
+        width: 18rem;  
+        margin: 1rem;  
+    }  
+
+    .card-body {  
+        background-color: #f8f9fa;  
+        border-radius: 0.5rem;  
+        padding: 1rem;  
+    }  
+</style>  
+
+@code {  
+
+    [Parameter]
+    public int taskid { get; set; } 
+
+    public List<TaskTimerModel>? TaskTimer { get; set; }
+    static HttpClient httpClient = new HttpClient();
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+#if ANDROID
+        var response = await httpClient.GetStringAsync($"http://10.0.2.2:5076/api/TaskTimers/{taskid}");
+#else
+        var response = await httpClient.GetStringAsync($"http://localhost:5076/api/TaskTimers/{taskid}");
+#endif
+        if (!string.IsNullOrEmpty(response))
+        {
+            var deserializedTask = JsonSerializer.Deserialize<List<TaskTimerModel>>(response);
+            if (deserializedTask != null)
+            {
+                TaskTimer = deserializedTask;
+            }
+
+        }
+    }
+}
