@@ -31,10 +31,12 @@
 </div>
 
 @code {
-
     protected override void OnInitialized()
     {
         UserModel.Id = 0;
+
+
+
     }
 
 
@@ -68,11 +70,11 @@
             Login = Email
         };
 
-#if ANDROID
-        var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/login", user);
-#else
-        var response = await httpClient.PostAsJsonAsync("http://localhost:5076/login", user);
-#endif
+        var baseUrl = Navigation.BaseUri.Contains("localhost")
+            ? "http://localhost:5076/login"
+            : "http://10.0.2.2:5076/login";
+        var response = await httpClient.PostAsJsonAsync(baseUrl, user);
+
         var request = response.StatusCode;
 
         string data = await response.Content.ReadAsStringAsync();

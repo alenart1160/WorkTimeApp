@@ -1,4 +1,5 @@
 ﻿@page "/createAccount"
+@inject NavigationManager Navigation
 
 <PageTitle>CreateAccount</PageTitle>
 
@@ -24,6 +25,7 @@
 
   
     <input type="submit" class="btn btn-primary" value="Sign in" />
+        <button class="btn btn-primary" @onclick="@NavigateToHome" value="Back" />
 </form>
 </div>
 
