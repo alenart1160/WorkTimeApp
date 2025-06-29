@@ -1,6 +1,9 @@
 ﻿@page "/createAccount"
 @inject NavigationManager Navigation
+@using WorkTimeApp.Shared.Model
+@using WorkTimeApp.Shared.Services
 
+@inject NavigationManager Navigation
 <PageTitle>CreateAccount</PageTitle>
 
 <h1>CreateAccount</h1>
@@ -25,7 +28,7 @@
 
   
     <input type="submit" class="btn btn-primary" value="Sign in" />
-        <button class="btn btn-primary" @onclick="@NavigateToHome" value="Back" />
+        <button class="btn btn-primary" @onclick="@NavigateToHome" >Back</button>
 </form>
 </div>
 

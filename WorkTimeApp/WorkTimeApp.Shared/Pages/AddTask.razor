@@ -1,9 +1,13 @@
 ﻿@page "/addTask/{userid}"
-@inject NavigationManager Navigation
-@inject IJSRuntime JSRuntime
+
 
 @using Microsoft.AspNetCore.Components.Forms
 @using WorkTimeApp.Shared.Model
+@using WorkTimeApp.Shared.Services
+
+@inject NavigationManager Navigation
+@inject ApiService ApiService
+@inject IJSRuntime JSRuntime
 
 <PageTitle>Add Task</PageTitle>
 
@@ -54,14 +58,14 @@
     private async void HandleValidSubmit()
     {
         task.userID = Convert.ToInt64(Userid);
-#if ANDROID
-        var response = await httpClient.PostAsJsonAsync("http://10.0.2.2:5076/api/tasks", task);
-#else
-        var response = await httpClient.PostAsJsonAsync("http://localhost:5076/api/tasks", task);
-#endif
+        string UrlSuffix = "/api/tasks/";
+
+        var result = await ApiService.PostProtectedDataAsync<TaskModel>(UrlSuffix, task);
+
+       // var response = await httpClient.PostAsJsonAsync("http://localhost:5076/api/tasks", task);
 
         
-        var responseCode = response;
+       // var responseCode = response;
         await JSRuntime.InvokeVoidAsync("history.back");
 
 

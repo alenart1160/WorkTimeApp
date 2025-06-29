@@ -1,6 +1,9 @@
-﻿@using WorkTimeApp.Shared.Model
-@inject NavigationManager Navigation
+﻿@using System.Text.Json
+@using WorkTimeApp.Shared.Model
+@using WorkTimeApp.Shared.Services
 
+@inject NavigationManager Navigation
+@inject ApiService ApiService
 @foreach (TaskModel task in FilteredTasks.OrderByDescending(o => o.priority))
 {
     <div class="card">
@@ -44,7 +47,7 @@
 
 @code {
     [Parameter]
-    public string Userid { get; set; } = null!;
+    public int Userid { get; set; }
 
     [Parameter]
     public string Filter { get; set; } = string.Empty; // Ensure default value is provided
@@ -76,11 +79,8 @@
         task.status = EnumStatus.Active;
         task.timeStart = DateTime.Now;
 
-#if ANDROID
-        var response = await httpClient.PutAsJsonAsync<TaskModel>($"http://10.0.2.2:5076/api/tasks/{task.id} ", task);
-#else
-        var response = await httpClient.PutAsJsonAsync<TaskModel>($"http://localhost:5076/api/tasks/{task.id} ", task);
-#endif
+        var result = await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/", task);
+
     }
 
     private async void StopTask(TaskModel task)
@@ -101,28 +101,26 @@
             StartTime = task.timeStart,
             EndTime = DateTime.Now,
             TaskID = task.id,
-            UserID = long.Parse(Userid),
+            UserID = Userid,
             DateTimeCreated = DateTime.Now
         };
+        var result1 = await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
+        var result2 = await ApiService.PostProtectedDataAsync<TaskTimerModel>("/api/tasktimers/", taskTimerModel);
 
-#if ANDROID
-        var response = await httpClient.PutAsJsonAsync<TaskModel>($"http://10.0.2.2:5076/api/tasks/{task.id} ", task);
-        var response2 = await httpClient.PostAsJsonAsync<TaskTimerModel>($"http://10.0.2.2:5076/api/tasktimers ", taskTimerModel);
-#else
-        var response = await httpClient.PutAsJsonAsync<TaskModel>($"http://localhost:5076/api/tasks/{task.id} ", task);
-        var response2 = await httpClient.PostAsJsonAsync<TaskTimerModel>($"http://localhost:5076/api/tasktimers ", taskTimerModel);
-#endif
+        // #if ANDROID
+        //         var response = await httpClient.PutAsJsonAsync<TaskModel>($"http:10.0.2.2:5076/api/tasks/{task.id} ", task);
+        //         var response2 = await httpClient.PostAsJsonAsync<TaskTimerModel>($"http:10.0.2.2:5076/api/tasktimers ", taskTimerModel);
+        // #else
+        //         var response = await httpClient.PutAsJsonAsync<TaskModel>($"http:localhost:5076/api/tasks/{task.id} ", task);
+        //         var response2 = await httpClient.PostAsJsonAsync<TaskTimerModel>($"http:localhost:5076/api/tasktimers ", taskTimerModel);
+        // #endif
     }
 
     private async void CompleteTask(TaskModel task)
     {
         task.status = EnumStatus.Completed;
         task.completed = true;
+        var result = await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
 
-#if ANDROID
-        var response = await httpClient.PutAsJsonAsync<TaskModel>($"http://10.0.2.2:5076/api/tasks/{task.id} ", task);
-#else
-        var response = await httpClient.PutAsJsonAsync<TaskModel>($"http://localhost:5076/api/tasks/{task.id} ", task);
-#endif
     }
 }

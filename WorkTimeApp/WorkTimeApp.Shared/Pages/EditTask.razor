@@ -1,12 +1,16 @@
-﻿@page "/editTask/{taskid}"
+﻿@page "/editTask/{taskid:int}"
 
 @inject NavigationManager Navigation
 @inject IJSRuntime JSRuntime
 
+@inject NavigationManager Navigation
+@inject UserModel UserModel
+@inject ApiService ApiService
 @using Microsoft.AspNetCore.Components
 @using Microsoft.AspNetCore.Components.Forms
 @using System.Text.Json
 @using WorkTimeApp.Shared.Model
+@using WorkTimeApp.Shared.Services
 
 <PageTitle>Edit Task</PageTitle>
 
@@ -43,22 +47,19 @@
 
 @code {
     [Parameter]
-    public string Taskid { get; set; } = null!;
+    public int Taskid { get; set; }
 
     private TaskModel task = new TaskModel();
     static HttpClient httpClient = new HttpClient();
 
     protected override async Task OnInitializedAsync()
     {
-        long taskId = Int32.Parse(Taskid);
-#if ANDROID
-        var response = await httpClient.GetStringAsync($"http://10.0.2.2:5076/api/tasks/{taskId}");
-#else
-        var response = await httpClient.GetStringAsync($"http://localhost:5076/api/tasks/{taskId}");
-#endif
-        if (!string.IsNullOrEmpty(response))
+
+        var result = await ApiService.GetProtectedDataWithoutUserIdAsync("/api/tasks/" + Taskid);
+
+        if (!string.IsNullOrEmpty(result))
         {
-            var deserializedTask = JsonSerializer.Deserialize<TaskModel>(response);
+            var deserializedTask = JsonSerializer.Deserialize<TaskModel>(result);
             if (deserializedTask != null)
             {
                 task = deserializedTask;
@@ -68,12 +69,8 @@
 
     private async void HandleValidSubmit()
     {
+        var result = await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + Taskid, task);
 
-#if ANDROID
-        await httpClient.PutAsJsonAsync($"http://10.0.2.2:5076/api/tasks/{Taskid}", task);
-#else
-        await httpClient.PutAsJsonAsync($"http://localhost:5076/api/tasks/{Taskid}", task);
-#endif
         await JSRuntime.InvokeVoidAsync("history.back");
     }
 

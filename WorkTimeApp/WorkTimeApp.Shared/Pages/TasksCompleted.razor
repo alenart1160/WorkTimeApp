@@ -1,17 +1,19 @@
-﻿@page "/tasks/completed/{userid}"
-@inject NavigationManager Navigation
+﻿@page "/tasks/completed/{userid:int}"
 
 @using Microsoft.AspNetCore.Components
 @using System.Text.Json
 @using WorkTimeApp.Shared.Model
+@using WorkTimeApp.Shared.Services
+
+@inject NavigationManager Navigation
+@inject ApiService ApiService
 
 <PageTitle>Active Tasks</PageTitle>
 
-<h1>Active Tasks</h1>
+<h1>Completed Tasks</h1>
 
 <p role="status">Completed tasks: @tasks.Count(t => t.completed)</p>
 
-<button class="btn btn-primary" @onclick="AddTask">Add Task</button>
 @if (tasks.Any())
 {
     <div class="task-cards">
@@ -44,7 +46,7 @@ else
 
 @code {
     [Parameter]
-    public string Userid { get; set; } = null!;
+    public int Userid { get; set; }
 
 
     private bool ActiveFilter(TaskModel task) => task.completed;
@@ -62,19 +64,16 @@ else
     protected override async Task OnInitializedAsync()
     {
 
-#if ANDROID
-        var response = await httpClient.GetStringAsync($"http://10.0.2.2:5076/api/tasks/user/{Userid}");
-#else
-        var response = await httpClient.GetStringAsync($"http://localhost:5076/api/tasks/user/{Userid}");
-#endif
-        if (!string.IsNullOrEmpty(response))
+
+        var result = await ApiService.GetProtectedDataAsync("/api/tasks/user/");
+
+        if (!string.IsNullOrEmpty(result))
         {
-            var deserializedTask = JsonSerializer.Deserialize<List<TaskModel>>(response);
+            var deserializedTask = JsonSerializer.Deserialize<List<TaskModel>>(result);
             if (deserializedTask != null)
             {
                 tasks = deserializedTask;
             }
-
         }
     }
 

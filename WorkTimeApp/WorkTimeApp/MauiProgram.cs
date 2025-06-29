@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
-using WorkTimeApp.Shared.Services;
+using WorkTime.Abstractions;
 using WorkTimeApp.Services;
 using WorkTimeApp.Shared.Model;
+using WorkTimeApp.Shared.Services;
 
 namespace WorkTimeApp;
 
@@ -19,8 +20,16 @@ public static class MauiProgram
 
         // Add device-specific services used by the WorkTimeApp.Shared project
         builder.Services.AddSingleton<IFormFactor, FormFactor>();
+        builder.Services.AddSingleton<ApiService>();
+
+        builder.Services.AddSingleton<IPlatformInfo, PlatformService>();
+        builder.Services.AddSingleton(new HttpClient());
+
         builder.Services.AddScoped<UserModel>();
+        builder.Services.AddSingleton<UserModel>();
+
         builder.Services.AddMauiBlazorWebView();
+
 
 #if DEBUG
         builder.Services.AddBlazorWebViewDeveloperTools();

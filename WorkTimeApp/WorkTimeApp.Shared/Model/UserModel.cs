@@ -9,22 +9,25 @@ namespace WorkTimeApp.Shared.Model
     public class UserModel
     {
         private long _id;
-        public long Id { get=>_id; set { 
-            if(Id != value)
+        public long Id
+        {
+            get => _id;
+            set
+            {
+                if (_id != value)
                 {
                     _id = value;
                     NotifyStateChanged();
                 }
-            } }
-        public  string? Login { get; set; }
-        public  string? Password { get; set; }
+            }
+        }
+        public string? Login { get; set; }
+        public string? Password { get; set; }
         public string? Email { get; set; }
         public string? NIP { get; set; }
 
+        public event Action OnChange = delegate { }; // Initialize with an empty delegate to avoid null issues.
 
-        public event Action? OnChange;
-
-        private void NotifyStateChanged() => OnChange?.Invoke();
-
+        private void NotifyStateChanged() => OnChange.Invoke();
     }
 }

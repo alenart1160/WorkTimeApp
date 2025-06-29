@@ -8,6 +8,9 @@
 
 @inject NavigationManager Navigation
 @inject UserModel UserModel
+@inject ApiService ApiService
+@inject WorkTime.Abstractions.IPlatformInfo PlatformInfo
+
 
 <PageTitle>Home</PageTitle>
 
@@ -34,9 +37,6 @@
     protected override void OnInitialized()
     {
         UserModel.Id = 0;
-
-
-
     }
 
 
@@ -63,41 +63,17 @@
             errorMessage = null;
         }
         // Create a new user
-        UserModel user = new UserModel()
-        {
-            Password = Password,
-            Email = Email,
-            Login = Email
-        };
+        UserModel.Password = Password;
+        UserModel.Email = Email;
+        UserModel.Login = Email;
 
-        var baseUrl = Navigation.BaseUri.Contains("localhost")
-            ? "http://localhost:5076/login"
-            : "http://10.0.2.2:5076/login";
-        var response = await httpClient.PostAsJsonAsync(baseUrl, user);
+        var result = await ApiService.LoginAsync(UserModel);
+        errorMessage = result ? "Zalogowano!" : "Błąd logowania";
 
-        var request = response.StatusCode;
+        UserModel.Id = ApiService._id;
+        
+        Navigation.NavigateTo($"tasks/{UserModel.Id}");
 
-        string data = await response.Content.ReadAsStringAsync();
-        if (request == System.Net.HttpStatusCode.OK)
-        {
-            user.Id = Convert.ToInt64(data);
-            UserModel.Id = user.Id;
-            UserModel = user;
-        }
-        if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-        {
-            errorMessage = "No user found";
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.OK)
-        {
-            errorMessage = "";
-            Navigation.NavigateTo($"tasks/{user.Id}");
-
-        }
-        else
-        {
-            errorMessage = "Error" + response.ReasonPhrase;
-        }
     }
 
     private void NavigateToResetPassword() => Navigation.NavigateTo("resetPassword");

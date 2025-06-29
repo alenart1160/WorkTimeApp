@@ -1,7 +1,10 @@
 <Solution>
   <Folder Name="/WorkTimeApp/">
+    <Project Path="WorkTime.Abstractions/WorkTime.Abstractions.csproj" Id="02b1bdce-05f9-4b3f-b307-de2b45cc2741" />
     <Project Path="WorkTimeApp/WorkTimeApp.Shared/WorkTimeApp.Shared.csproj" />
     <Project Path="WorkTimeApp/WorkTimeApp.Web/WorkTimeApp.Web.csproj" />
-    <Project Path="WorkTimeApp/WorkTimeApp/WorkTimeApp.csproj" />
+    <Project Path="WorkTimeApp/WorkTimeApp/WorkTimeApp.csproj">
+      <Deploy Solution="Debug|*" />
+    </Project>
   </Folder>
 </Solution>

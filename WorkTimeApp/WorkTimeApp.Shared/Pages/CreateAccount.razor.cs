@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
@@ -6,7 +7,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using WorkTimeApp.Shared.Model;
-using Microsoft.AspNetCore.Components;
+using WorkTimeApp.Shared.Services;
 
 namespace WorkTimeApp.Shared.Pages
 {
@@ -17,6 +18,9 @@ namespace WorkTimeApp.Shared.Pages
 
         [Inject]
         private NavigationManager NavigationManager { get; set; } = null!; // Inject NavigationManager
+
+        [Inject]
+        private ApiService ApiService { get; set; } = null!; // Inject ApiService
 
         public string? Email { get; set; }
         public string Password { get; set; } = null!;
@@ -50,16 +54,9 @@ namespace WorkTimeApp.Shared.Pages
                 userModel.Password = passwordHasher.HashPassword(userModel, Password);
                 var httpClient = new HttpClient();
 
-
-
-                var baseUrl = NavigationManager.BaseUri.Contains("localhost")
-                    ? "http://localhost:5076/api/users"
-                    : "http://10.0.2.2:5076/api/users";
-                var loginResponse = await httpClient.PostAsJsonAsync(baseUrl, userModel);
-
-                request = loginResponse.StatusCode;
-
-                var data = await loginResponse.Content.ReadAsStringAsync();
+                // Use the injected ApiService instance
+                var result = await ApiService.CreateAccountAsync("/api/users", userModel);
+             
             }
             catch (Exception e)
             {
