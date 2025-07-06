@@ -62,13 +62,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\WorkTimeApp.Shared\Pages\CreateAccount.razor.cs" Link="CreateAccount.razor.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.70" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="9.0.70" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.5" />
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.81" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="9.0.81" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>

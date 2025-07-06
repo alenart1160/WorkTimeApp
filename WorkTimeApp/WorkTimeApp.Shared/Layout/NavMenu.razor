@@ -20,6 +20,10 @@
                 <NavLink class="nav-link" href="createAccount" Match="NavLinkMatch.All">
                     <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Sign in
                 </NavLink>
+
+               
+    
+                
             }
         </div>
         @if (UserModel.Id !=0)
@@ -40,11 +44,24 @@
                     <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> All
                 </NavLink>
             </div>
+
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="@("/taskCalendar")" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>Tasks Calendar
+                </NavLink>
+            </div>
+
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="@("/timerCalendar")" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>Activity Calendar
+                </NavLink>
+            </div>
             <div class="nav-item px-3">
                 <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                     <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Log out
                 </NavLink>
             </div>
+
         }
     </nav>
 </div>

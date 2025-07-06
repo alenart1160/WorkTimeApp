@@ -67,7 +67,7 @@
         UserModel.Email = Email;
         UserModel.Login = Email;
 
-        var result = await ApiService.LoginAsync(UserModel);
+        var result = await ApiService.LoginAsync(UserModel, ApiService.GetOptions());
         errorMessage = result ? "Zalogowano!" : "Błąd logowania";
 
         UserModel.Id = ApiService._id;

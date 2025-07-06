@@ -10,9 +10,9 @@ namespace WorkTimeApp.Shared.Services;
 public class ApiService
 {
     private readonly HttpClient _httpClient;
-    private AuthenticationHeaderValue _token;  // Tu przechowujemy token
+    private AuthenticationHeaderValue? _token;  // Zmieniono na dopuszczaj¹cy wartoœæ null
     public int _id; // Tu przechowujemy ID u¿ytkownika
-    IPlatformInfo? PlatformInfo; // Inicjalizacja interfejsu IPlatformInfo
+    readonly IPlatformInfo? PlatformInfo; // Inicjalizacja interfejsu IPlatformInfo
     public string BaseUrl { get; set; } = "http://localhost:5000"; // Domyœlny URL, mo¿na zmieniæ w konstruktorze
     public ApiService(HttpClient httpClient, IPlatformInfo? platformInfo)
     {
@@ -23,7 +23,12 @@ public class ApiService
         BaseUrl = PlatformInfo?.GetBaseUrl() ?? "http://localhost:5000";
     }
 
-    public async Task<bool> LoginAsync(UserModel user)
+    public static JsonSerializerOptions GetOptions()
+    {
+        return new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+    }
+
+    public async Task<bool> LoginAsync(UserModel user, JsonSerializerOptions options)
     {
         UserModel loginData = user;
         var content = new StringContent(JsonSerializer.Serialize(loginData), Encoding.UTF8, "application/json");
@@ -32,7 +37,7 @@ public class ApiService
         if (response.IsSuccessStatusCode)
         {
             var json = await response.Content.ReadAsStringAsync();
-            var obj = JsonSerializer.Deserialize<LoginResponse>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var obj = JsonSerializer.Deserialize<LoginResponse>(json, options);
 
             if (obj != null && !string.IsNullOrEmpty(obj.Token))
             {
@@ -49,14 +54,14 @@ public class ApiService
     {
         // Correctly create an AuthenticationHeaderValue instance
 
-        var response = await _httpClient.PostAsJsonAsync(BaseUrl + page,user);
+        var response = await _httpClient.PostAsJsonAsync(BaseUrl + page, user);
 
         return await response.Content.ReadAsStringAsync();
     }
 
     public async Task<string> GetProtectedDataAsync(string page)
     {
-        if (string.IsNullOrEmpty(_token.ToString()))
+        if (_token == null || string.IsNullOrEmpty(_token.ToString()))
             throw new InvalidOperationException("Brak tokena, zaloguj siê najpierw.");
 
         // Correctly create an AuthenticationHeaderValue instance
@@ -69,7 +74,7 @@ public class ApiService
 
     public async Task<string> GetProtectedDataWithoutUserIdAsync(string page)
     {
-        if (string.IsNullOrEmpty(_token.ToString()))
+        if (_token == null || string.IsNullOrEmpty(_token.ToString()))
             throw new InvalidOperationException("Brak tokena, zaloguj siê najpierw.");
 
         // Correctly create an AuthenticationHeaderValue instance
@@ -81,7 +86,7 @@ public class ApiService
     }
     public async Task<string> PostProtectedDataAsync<T>(string page, T PostObject)
     {
-        if (string.IsNullOrEmpty(_token.ToString()))
+        if (_token == null || string.IsNullOrEmpty(_token.ToString()))
             throw new InvalidOperationException("Brak tokena, zaloguj siê najpierw.");
 
         // Correctly create an AuthenticationHeaderValue instance
@@ -93,7 +98,7 @@ public class ApiService
     }
     public async Task<string> PutProtectedDataAsync<T>(string page, T PostObject)
     {
-        if (string.IsNullOrEmpty(_token.ToString()))
+        if (_token == null || string.IsNullOrEmpty(_token.ToString()))
             throw new InvalidOperationException("Brak tokena, zaloguj siê najpierw.");
 
         // Correctly create an AuthenticationHeaderValue instance

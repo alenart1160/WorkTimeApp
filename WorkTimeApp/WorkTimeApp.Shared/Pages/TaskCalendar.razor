@@ -1,0 +1,230 @@
+﻿@page "/taskCalendar"
+@using System.Text.Json
+@using WorkTimeApp.Shared.Model
+@using WorkTimeApp.Shared.Services
+@inject ApiService ApiService
+
+<style>
+    .calendar-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .calendar {
+        border-collapse: collapse;
+        font-size: 1.2em;
+    }
+
+        .calendar th, .calendar td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .calendar td {
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+            .calendar td:hover {
+                background-color: #e0e0e0;
+            }
+
+            .calendar td.selected {
+                background-color: #2196f3;
+                color: white;
+            }
+
+            .calendar td.today {
+                border: 2px solid red;
+            }
+
+            .calendar td .dot {
+                width: 6px;
+                height: 6px;
+                background-color: #2196f3;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+    .calendar-buttons {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+        .calendar-buttons button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            font-size: 1em;
+        }
+
+    .text-muted {
+        color: gray;
+    }
+
+    .task-list {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    .task-item {
+        padding: 5px;
+        border-bottom: 1px solid #eee;
+    }
+
+        .task-item:last-child {
+            border-bottom: none;
+        }
+</style>
+
+<div class="calendar-container">
+    <div>
+        <div class="calendar-buttons">
+            <button @onclick="PreviousYear">«</button>
+            <button @onclick="PreviousMonth">‹</button>
+            <span>@currentDate.ToString("MMMM yyyy")</span>
+            <button @onclick="NextMonth">›</button>
+            <button @onclick="NextYear">»</button>
+        </div>
+
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Pn</th>
+                    <th>Wt</th>
+                    <th>Śr</th>
+                    <th>Cz</th>
+                    <th>Pt</th>
+                    <th>So</th>
+                    <th>Nd</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var week in GetWeeks())
+                {
+                    <tr>
+                        @foreach (var day in week)
+                        {
+                            <td class="@GetCellClass(day)"
+                                @onclick="() => SelectDate(day)">
+                                @day.Day
+                                @if (HasTasks(day))
+                                {
+                                    <div class="dot"></div>
+                                }
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        @if (selectedDate.HasValue)
+        {
+            <div class="task-list">
+                <h4>Zadania na @selectedDate.Value.ToShortDateString()</h4>
+                @if (TasksForSelectedDate.Any())
+                {
+                    @foreach (var task in TasksForSelectedDate)
+                    {
+                        <div class="task-item">
+                            <strong>@task.title</strong> (priorytet: @task.priority, status: @task.status)
+                            <br />
+                            @task.description
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div>Brak zadań na ten dzień.</div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    DateTime currentDate = DateTime.Today;
+    DateTime today = DateTime.Today;
+    DateTime? selectedDate = null;
+
+    List<TaskModel> AllTasks = new();
+
+    IEnumerable<TaskModel> TasksForSelectedDate => selectedDate.HasValue
+        ? AllTasks.Where(t => t.dueDate.Date == selectedDate.Value.Date)
+        : Enumerable.Empty<TaskModel>();
+
+    void NextMonth() => currentDate = currentDate.AddMonths(1);
+    void PreviousMonth() => currentDate = currentDate.AddMonths(-1);
+    void NextYear() => currentDate = currentDate.AddYears(1);
+    void PreviousYear() => currentDate = currentDate.AddYears(-1);
+
+    void SelectDate(DateTime day)
+    {
+        selectedDate = day;
+    }
+
+    string GetCellClass(DateTime day)
+    {
+        var classes = "";
+        if (selectedDate.HasValue && day.Date == selectedDate.Value.Date)
+            classes += "selected ";
+        if (day.Date == today)
+            classes += "today ";
+        if (day.Month != currentDate.Month)
+            classes += "text-muted ";
+        return classes;
+    }
+
+    bool HasTasks(DateTime day)
+    {
+        return AllTasks.Any(t => t.dueDate.Date == day.Date);
+    }
+
+    IEnumerable<List<DateTime>> GetWeeks()
+    {
+        var firstOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
+        var firstDayInGrid = firstOfMonth.AddDays(-(int)(firstOfMonth.DayOfWeek == DayOfWeek.Sunday ? 6 : ((int)firstOfMonth.DayOfWeek - 1)));
+
+        var weeks = new List<List<DateTime>>();
+        var date = firstDayInGrid;
+
+        while (true)
+        {
+            var week = Enumerable.Range(0, 7).Select(i => date.AddDays(i)).ToList();
+            weeks.Add(week);
+
+            if (week.Any(d => d.Month == currentDate.Month && d.Day == DateTime.DaysInMonth(currentDate.Year, currentDate.Month)))
+                break;
+
+            date = date.AddDays(7);
+        }
+
+        return weeks;
+    }
+    protected override async Task OnInitializedAsync()
+    {
+
+        var result = await ApiService.GetProtectedDataAsync("/api/tasks/user/");
+
+        if (!string.IsNullOrEmpty(result))
+        {
+            var deserializedTask = JsonSerializer.Deserialize<List<TaskModel>>(result);
+            if (deserializedTask != null)
+            {
+                AllTasks = deserializedTask;
+            }
+        }
+    }
+
+}
