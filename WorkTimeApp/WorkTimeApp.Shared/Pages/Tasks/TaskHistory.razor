@@ -6,48 +6,89 @@
 
 @inject NavigationManager Navigation
 @inject ApiService ApiService
+@inject IJSRuntime JSRuntime
 
-<PageTitle>History</PageTitle>  
+<PageTitle>Historia zadań</PageTitle>  
 
-<h1>History</h1>  
-
+<h2>Historia zadań</h2>  
+<button class="btn btn-secondary mb-3" @onclick="GoBack">
+    <i class="bi bi-arrow-left"></i> Wstecz
+</button>
 @if (TaskTimer != null && TaskTimer.Any())  
 {  
-    <div class="task-cards">  
-        @foreach (TaskTimerModel timer in TaskTimer.OrderByDescending(o => o.DateTimeCreated))  
+    <div class="history-container">  
+        @foreach (TaskTimerModel timer in TaskTimer.OrderByDescending(o => o.StartTime))  
         {  
-            <div class="card">  
-                <div class="card-body">  
-                    <h5 class="card-title"> @timer.StartTime  </h5>  
-                    <p class="card-text">@timer.EndTime</p>  
-                </div>  
-            </div>  
+          <div class="history-item">
+    <div class="history-time">
+        <strong>@timer.StartTime.ToString("dd MMM yyyy HH:mm:ss")</strong>
+        <br />
+        <span>@timer.EndTime.ToString("dd MMM yyyy HH:mm:ss")</span>
+    </div>
+    <div class="history-status @GetStatusClass(timer)">
+        @((timer.EndTime - timer.StartTime).ToString(@"hh\:mm\:ss"))
+    </div>
+</div>
+
         }  
     </div>  
 }  
 else  
 {  
-    <p>No tasks available.</p>  
+    <p>Brak historii zadań.</p>  
 }  
 
-<style>  
-    .task-cards {  
-        display: flex;  
-        flex-wrap: wrap;  
-        gap: 1rem;  
-    }  
+<style>
+    .history-container {
+        max-width: 600px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-    .card {  
-        width: 18rem;  
-        margin: 1rem;  
-    }  
+    .history-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 12px 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+    }
 
-    .card-body {  
-        background-color: #f8f9fa;  
-        border-radius: 0.5rem;  
-        padding: 1rem;  
-    }  
-</style>  
+    .history-item:hover {
+        transform: scale(1.02);
+    }
+
+    .history-time {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .history-status {
+        font-size: 0.9rem;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 20px;
+        color: #fff;
+        min-width: 70px;
+        text-align: center;
+    }
+
+    .status-short {
+        background-color: #4caf50; /* zielony */
+    }
+
+    .status-medium {
+        background-color: #2196f3; /* niebieski */
+    }
+
+    .status-long {
+        background-color: #f44336; /* czerwony */
+    }
+</style>
 
 @code {  
 
@@ -55,9 +96,6 @@ else
     public int Taskid { get; set; } 
 
     public List<TaskTimerModel>? TaskTimer { get; set; }
-    static HttpClient httpClient = new HttpClient();
-
-
 
     protected override async Task OnInitializedAsync()
     {
@@ -70,7 +108,18 @@ else
             {
                 TaskTimer = deserializedTask;
             }
-
         }
+    }
+    private async Task GoBack()
+    {
+        await JSRuntime.InvokeVoidAsync("history.back");
+    }
+    string GetStatusClass(TaskTimerModel timer)
+    {
+        var duration = (timer.EndTime - timer.StartTime).TotalHours;
+
+        if (duration < 1) return "status-short"; // krótki czas
+        if (duration <= 3) return "status-medium"; // średni
+        return "status-long"; // długi
     }
 }

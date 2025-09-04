@@ -1,59 +1,156 @@
-﻿@using System.Text.Json
+﻿@using System.Threading
+@using System.Threading.Tasks
 @using WorkTimeApp.Shared.Model
 @using WorkTimeApp.Shared.Services
 
 @inject NavigationManager Navigation
 @inject ApiService ApiService
-@foreach (TaskModel task in FilteredTasks.OrderByDescending(o => o.priority))
-{
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title"> @task.title  </h5>
-            <p class="card-text">@task.description</p>
-            <p class="card-text"><small class="text-muted">Due date: @task.dueDate.ToString("dd-MM-yyyy")</small></p>
-            <p class="card-text">
-                <small class="text-muted">
-                    Time passed:
-                    @if (task.timePassed != null)
-                    {
-                        <span>@task.timePassed</span>
-                    }
-                    else
-                    {
-                        <span>00:00:00</span>
-                    }
-                </small>
-            </p>
 
-            @if (task.status == EnumStatus.InComplete)
-            {
-                <button @onclick="() => EditTask(task.id)">Edit</button>
-                <button @onclick="() => StartTask(task)">Start</button>
-                <button @onclick="() => CompleteTask(task)">Complete</button>
-                <button @onclick="() => TaskHistory(task.id)">History</button>
-            }
-            @if (task.status == EnumStatus.Active)
-            {
-                <button @onclick="() => StopTask(task)">Stop</button>
-                <button @onclick="() => TaskHistory(task.id)">History</button>
-            }
-            @if (task.status == EnumStatus.Completed)
-            {
-                <button @onclick="() => TaskHistory(task.id)">History</button>
-            }
+<div class="task-list-container">
+    @foreach (TaskModel task in FilteredTasks.OrderByDescending(o => o.priority))
+    {
+        <div class="task-card">
+            <div class="task-header">
+                <h4>@task.title</h4>
+                <span class="badge bg-primary">priorytet: @task.priority</span>
+                <span class="badge @(task.status == EnumStatus.Completed ? "bg-success" : (task.status == EnumStatus.Active ? "bg-warning" : "bg-secondary"))">
+                    @(task.status == EnumStatus.Completed ? "Zakończony" : (task.status == EnumStatus.Active ? "Aktywny" : "Nie zakończony"))
+                </span>
+            </div>
+            <div class="task-body">
+                <small class="text-muted">Termin: @(task.dueDate is DateTime dt ? dt.ToString("dd-MM-yyyy") : "")</small>
+                <br />
+                <small class="text-muted">
+                    Czas: @GetLiveTime(task)
+                </small>
+            </div>
+            <div class="task-footer">
+                @if (task.status == EnumStatus.InComplete)
+                {
+                    <button class="btn-action edit" @onclick="() => EditTask(task.id)">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn-action start" @onclick="() => StartTask(task)">
+                        <i class="bi bi-play-fill"></i>
+                    </button>
+                    <button class="btn-action complete" @onclick="() => CompleteTask(task)">
+                        <i class="bi bi-check2-circle"></i>
+                    </button>
+                }
+                @if (task.status == EnumStatus.Active)
+                {
+                    <button class="btn-action stop" @onclick="() => StopTask(task)">
+                        <i class="bi bi-stop-fill"></i>
+                    </button>
+                }
+                <button class="btn-action history" @onclick="() => TaskHistory(task.id)">
+                    <i class="bi bi-clock-history"></i>
+                </button>
+            </div>
         </div>
-    </div>
-}
+    }
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    /* Twój CSS bez zmian */
+    .task-list-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .task-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s;
+    }
+
+        .task-card:hover {
+            transform: translateY(-3px);
+        }
+
+    .task-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+        .task-header h4 {
+            flex-grow: 1;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+    .task-body {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    .task-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .btn-action {
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 8px;
+        transition: background 0.2s, transform 0.1s;
+    }
+
+        .btn-action:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-action.edit:hover {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .btn-action.start:hover {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .btn-action.stop:hover {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .btn-action.complete:hover {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .btn-action.history:hover {
+            background: #ede7f6;
+            color: #512da8;
+        }
+</style>
 
 @code {
     [Parameter]
     public int Userid { get; set; }
 
     [Parameter]
-    public string Filter { get; set; } = string.Empty; // Ensure default value is provided
+    public string Filter { get; set; } = string.Empty;
 
     [Parameter]
-    public List<TaskModel> tasks { get; set; } = new(); // Corrected to property
+    public List<TaskModel> tasks { get; set; } = new();
 
     [Parameter]
     public Func<TaskModel, bool>? FilterFunc { get; set; }
@@ -61,42 +158,55 @@
     private IEnumerable<TaskModel> FilteredTasks =>
         FilterFunc is null ? tasks : tasks.Where(FilterFunc);
 
+    private CancellationTokenSource? cts;
 
-    static HttpClient httpClient = new HttpClient();
-
-    private void EditTask(long TaskId)
+    protected override async Task OnInitializedAsync()
     {
-        Navigation.NavigateTo($"editTask/{TaskId}");
+        cts = new CancellationTokenSource();
+        var periodicTimer = new PeriodicTimer(TimeSpan.FromSeconds(1));
+
+        try
+        {
+            while (await periodicTimer.WaitForNextTickAsync(cts.Token))
+            {
+                await InvokeAsync(StateHasChanged);
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            // Timer anulowany - nic nie robimy
+        }
     }
 
-    private void TaskHistory(long TaskId)
+    private string GetLiveTime(TaskModel task)
     {
-        Navigation.NavigateTo($"tasks/history/{TaskId}");
+        if (task.status == EnumStatus.Active && task.timeStart != default)
+        {
+            TimeSpan passed = string.IsNullOrEmpty(task.timePassed) ? TimeSpan.Zero : TimeSpan.Parse(task.timePassed);
+            TimeSpan current = DateTime.Now - task.timeStart;
+            TimeSpan total = passed + current;
+            return total.ToString(@"hh\:mm\:ss");
+        }
+        else
+        {
+            return string.IsNullOrEmpty(task.timePassed) ? "00:00:00" : task.timePassed;
+        }
     }
 
-    private async void StartTask(TaskModel task)
+    private async Task StartTask(TaskModel task)
     {
         task.status = EnumStatus.Active;
         task.timeStart = DateTime.Now;
-
-        var result = await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/", task);
-
+        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
     }
 
-    private async void StopTask(TaskModel task)
+    private async Task StopTask(TaskModel task)
     {
         task.status = EnumStatus.InComplete;
+        var existingTime = string.IsNullOrEmpty(task.timePassed) ? TimeSpan.Zero : TimeSpan.Parse(task.timePassed);
+        task.timePassed = (existingTime + (DateTime.Now - task.timeStart)).ToString(@"hh\:mm\:ss");
 
-        TimeSpan existingTimePassed = TimeSpan.Zero;
-        if (!string.IsNullOrEmpty(task.timePassed))
-        {
-            existingTimePassed = TimeSpan.Parse(task.timePassed);
-        }
-
-        TimeSpan timePassed = existingTimePassed + (DateTime.Now - task.timeStart);
-        task.timePassed = timePassed.ToString(@"hh\:mm\:ss");
-
-        TaskTimerModel taskTimerModel = new()
+        var taskTimerModel = new TaskTimerModel
         {
             StartTime = task.timeStart,
             EndTime = DateTime.Now,
@@ -104,23 +214,24 @@
             UserID = Userid,
             DateTimeCreated = DateTime.Now
         };
-        var result1 = await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
-        var result2 = await ApiService.PostProtectedDataAsync<TaskTimerModel>("/api/tasktimers/", taskTimerModel);
 
-        // #if ANDROID
-        //         var response = await httpClient.PutAsJsonAsync<TaskModel>($"http:10.0.2.2:5076/api/tasks/{task.id} ", task);
-        //         var response2 = await httpClient.PostAsJsonAsync<TaskTimerModel>($"http:10.0.2.2:5076/api/tasktimers ", taskTimerModel);
-        // #else
-        //         var response = await httpClient.PutAsJsonAsync<TaskModel>($"http:localhost:5076/api/tasks/{task.id} ", task);
-        //         var response2 = await httpClient.PostAsJsonAsync<TaskTimerModel>($"http:localhost:5076/api/tasktimers ", taskTimerModel);
-        // #endif
+        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
+        await ApiService.PostProtectedDataAsync<TaskTimerModel>("/api/tasktimers/", taskTimerModel);
     }
 
-    private async void CompleteTask(TaskModel task)
+    private void EditTask(long TaskId) => Navigation.NavigateTo($"editTask/{TaskId}");
+    private void TaskHistory(long TaskId) => Navigation.NavigateTo($"tasks/history/{TaskId}");
+
+    private async Task CompleteTask(TaskModel task)
     {
         task.status = EnumStatus.Completed;
         task.completed = true;
-        var result = await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
+        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
+    }
 
+    public void Dispose()
+    {
+        cts?.Cancel();
+        cts?.Dispose();
     }
 }

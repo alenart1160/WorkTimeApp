@@ -8,41 +8,56 @@
 @inject NavigationManager Navigation
 @inject ApiService ApiService
 
+<PageTitle>Wszystkie Zadania</PageTitle>
 
-<PageTitle>Active Tasks</PageTitle>
+<div class="container mt-4">
+    <h2 class="text-primary mb-3">
+        <i class="bi bi-card-checklist"></i> Wszystkie Zadania
+    </h2>
 
-<h1>All Tasks</h1>
-
-<p role="status">All tasks: @tasks.Count()</p>
-
-<button class="btn btn-primary" @onclick="AddTask">Add Task</button>
-@if (tasks.Any())
-{
-    <div class="task-cards">
-        <WorkTimeApp.Shared.Components.TaskList tasks="@tasks" Userid="@Userid"></WorkTimeApp.Shared.Components.TaskList>
+    <div class="mb-4">
+        <button class="btn btn-success" @onclick="AddTask">
+            <i class="bi bi-plus-circle"></i> Dodaj Zadanie
+        </button>
     </div>
-}
-else
-{
-    <p>No tasks available.</p>
-}
+
+    <p class="text-muted">Łącznie zadań: <strong>@tasks.Count()</strong></p>
+
+    @if (tasks.Any())
+    {
+        <div class="task-cards">
+            <WorkTimeApp.Shared.Components.TaskList tasks="@tasks" Userid="@Userid"></WorkTimeApp.Shared.Components.TaskList>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            <i class="bi bi-info-circle"></i> Brak zadań do wyświetlenia.
+        </div>
+    }
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
     .task-cards {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1rem;
     }
 
-    .card {
-        width: 18rem;
-        margin: 1rem;
+    .btn i {
+        margin-right: 6px;
     }
 
-    .card-body {
-        background-color: #f8f9fa;
-        border-radius: 0.5rem;
+    h2 i {
+        margin-right: 8px;
+    }
+
+    .alert {
+        font-size: 1.1rem;
         padding: 1rem;
+        border-radius: 8px;
     }
 </style>
 
@@ -50,34 +65,18 @@ else
     [Parameter]
     public int Userid { get; set; }
 
+    public List<TaskModel> tasks = new();
 
-    //private bool ActiveFilter(TaskModel task) => !task.completed;
-    static HttpClient httpClient = new HttpClient();
-
-
-    public List<TaskModel> tasks = new List<TaskModel>();
-
-    private void AddTask()
-    {
-
-        Navigation.NavigateTo("addTask/" + Userid);
-    }
+    private void AddTask() => Navigation.NavigateTo($"addTask/{Userid}");
 
     protected override async Task OnInitializedAsync()
     {
-
         var result = await ApiService.GetProtectedDataAsync("/api/tasks/user/");
-
         if (!string.IsNullOrEmpty(result))
         {
             var deserializedTask = JsonSerializer.Deserialize<List<TaskModel>>(result);
             if (deserializedTask != null)
-            {
                 tasks = deserializedTask;
-            }
         }
     }
-
-
-
 }

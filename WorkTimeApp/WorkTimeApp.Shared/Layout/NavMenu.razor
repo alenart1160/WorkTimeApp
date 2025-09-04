@@ -8,60 +8,52 @@
 </div>
 
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
         <div class="nav-item px-3">
             @if (UserModel.Id == 0)
             {
                 <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                    <span class="bi bi-house-door-fill" aria-hidden="true"></span> Start
                 </NavLink>
                 <NavLink class="nav-link" href="createAccount" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Sign in
+                    <span class="bi bi-person-plus-fill" aria-hidden="true"></span> Utwórz konto
                 </NavLink>
-
-               
-    
-                
             }
         </div>
-        @if (UserModel.Id !=0)
+
+        @if (UserModel.Id != 0)
         {
-
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="@("tasks/" + UserModel.Id)" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Active
+                <NavLink class="nav-link" href="@($"tasks/{UserModel.Id}")" Match="NavLinkMatch.All">
+                    <span class="bi bi-play-circle-fill" aria-hidden="true"></span> Aktywne Zadania
                 </NavLink>
             </div>
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="@("tasks/completed/" + UserModel.Id)" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Completed
+                <NavLink class="nav-link" href="@($"tasks/completed/{UserModel.Id}")" Match="NavLinkMatch.All">
+                    <span class="bi bi-check-circle-fill" aria-hidden="true"></span> Zakończone Zadania
                 </NavLink>
             </div>
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="@("tasks/all/" + UserModel.Id)" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> All
+                <NavLink class="nav-link" href="@($"tasks/all/{UserModel.Id}")" Match="NavLinkMatch.All">
+                    <span class="bi bi-list-task" aria-hidden="true"></span> Wszystkie Zadania
                 </NavLink>
             </div>
-
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="@("/taskCalendar")" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>Tasks Calendar
+                <NavLink class="nav-link" href="/taskCalendar" Match="NavLinkMatch.All">
+                    <span class="bi bi-calendar-check-fill" aria-hidden="true"></span> Kalendarz Zadań
                 </NavLink>
             </div>
-
             <div class="nav-item px-3">
-                <NavLink class="nav-link" href="@("/timerCalendar")" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>Activity Calendar
+                <NavLink class="nav-link" href="/timerCalendar" Match="NavLinkMatch.All">
+                    <span class="bi bi-clock-history" aria-hidden="true"></span> Kalendarz Aktywności
                 </NavLink>
             </div>
             <div class="nav-item px-3">
                 <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Log out
+                    <span class="bi bi-box-arrow-right" aria-hidden="true"></span> Wyloguj się
                 </NavLink>
             </div>
-
         }
     </nav>
 </div>

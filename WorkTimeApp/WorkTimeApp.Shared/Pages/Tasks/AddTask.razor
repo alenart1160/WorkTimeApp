@@ -1,6 +1,5 @@
 ﻿@page "/addTask/{userid}"
 
-
 @using Microsoft.AspNetCore.Components.Forms
 @using WorkTimeApp.Shared.Model
 @using WorkTimeApp.Shared.Services
@@ -11,39 +10,96 @@
 
 <PageTitle>Add Task</PageTitle>
 
-<h1>Editor</h1>
+<div class="form-container">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white d-flex align-items-center">
+            <i class="bi bi-plus-circle me-2"></i>
+            <h5 class="mb-0">Dodaj nowe zadanie</h5>
+        </div>
+        <div class="card-body">
+            <EditForm Model="@task" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
 
+                <div class="mb-3">
+                    <label for="title" class="form-label">Tytuł:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
+                        <InputText id="title" @bind-Value="task.title" class="form-control" placeholder="Wprowadź tytuł zadania" />
+                    </div>
+                </div>
 
-<EditForm Model="@task" OnValidSubmit="HandleValidSubmit">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
+                <div class="mb-3">
+                    <label for="description" class="form-label">Opis:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-card-text"></i></span>
+                        <InputTextArea id="description" @bind-Value="task.description" class="form-control" placeholder="Dodaj opis zadania" />
+                    </div>
+                </div>
 
-    <div>
-        <label for="title">Title:</label>
-        <InputText id="title" @bind-Value="task.title" class="form-control" />
+                <div class="mb-3">
+                    <label for="dueDate" class="form-label">Termin realizacji:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+                        <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="priority" class="form-label">Priorytet:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-flag-fill"></i></span>
+                        <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-check2-circle"></i> Zapisz
+                    </button>
+                    <button type="button" class="btn btn-secondary" @onclick="GoBack">
+                        <i class="bi bi-arrow-left-circle"></i> Wróć
+                    </button>
+                </div>
+            </EditForm>
+        </div>
     </div>
+</div>
 
-    <div>
-        <label for="description">Description:</label>
-        <InputTextArea id="description" @bind-Value="task.description" class="form-control" />
-    </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <div>
-        <label for="dueDate">Due Date:</label>
-        <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control"></InputDate>
-    </div>
+<style>
+    .form-container {
+        max-width: 600px;
+        margin: 30px auto;
+    }
 
-    <div>
-        <label for="priority">Priority:</label>
-        <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
-    </div>
-    <br />
-    <input type="submit" class="btn btn-primary" value="Add Task" />
-</EditForm>
-<button class="btn btn-primary" @onclick="GoBack">Go Back</button>
+    .card {
+        border-radius: 10px;
+    }
+
+    .card-header {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .input-group-text {
+        background-color: #f8f9fa;
+    }
+
+    .btn {
+        min-width: 120px;
+    }
+
+        .btn i {
+            margin-right: 6px;
+        }
+</style>
+
 @code {
     [Parameter]
     public string Userid { get; set; } = null!;
+
     private TaskModel task = new TaskModel()
     {
 
@@ -58,18 +114,10 @@
     private async void HandleValidSubmit()
     {
         task.userID = Convert.ToInt64(Userid);
-        string UrlSuffix = "/api/tasks/";
-
-        var result = await ApiService.PostProtectedDataAsync<TaskModel>(UrlSuffix, task);
-
-       // var response = await httpClient.PostAsJsonAsync("http://localhost:5076/api/tasks", task);
-
-        
-       // var responseCode = response;
+        await ApiService.PostProtectedDataAsync<TaskModel>("/api/tasks/", task);
         await JSRuntime.InvokeVoidAsync("history.back");
-
-
     }
+
     private async void GoBack()
     {
         await JSRuntime.InvokeVoidAsync("history.back");

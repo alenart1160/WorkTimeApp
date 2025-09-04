@@ -3,88 +3,161 @@
 @using WorkTimeApp.Shared.Model
 @using WorkTimeApp.Shared.Services
 @inject ApiService ApiService
+@inject WorkTime.Abstractions.IExportToExcel exportToExcel
 
 <style>
     .calendar-container {
         display: flex;
         justify-content: center;
         margin-top: 20px;
-    }
-
-    .calendar {
-        border-collapse: collapse;
-        font-size: 1.2em;
-    }
-
-        .calendar th, .calendar td {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            padding: 5px;
-            border: 1px solid #ccc;
-            position: relative;
-        }
-
-        .calendar td {
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-
-    .calendar td.today {
-        border: 2px solid red;
+        font-family: Arial, sans-serif;
     }
 
     .calendar-buttons {
-        text-align: center;
-        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
     }
 
-    .calendar-buttons button {
-        margin: 0 5px;
-        padding: 5px 10px;
-        font-size: 1em;
+    .calendar-title {
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 0 10px;
+        color: #333;
+    }
+
+    .btn-nav {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .btn-nav:hover {
+            background-color: #357abd;
+        }
+
+    .calendar {
+        border-collapse: collapse;
+        font-size: 1.1rem;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+        .calendar th {
+            background: #4a90e2;
+            color: white;
+            padding: 10px;
+        }
+
+        .calendar td {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            padding: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            border: 1px solid #ddd;
+        }
+
+            .calendar td:hover {
+                background: rgba(0,0,0,0.05);
+            }
+
+    .today {
+        border: 2px solid #e53935 !important;
+        font-weight: bold;
+    }
+
+    .other-month {
+        color: #bbb;
     }
 
     .task-list {
-        max-width: 400px;
+        max-width: 450px;
         margin: 20px auto;
-        padding: 10px;
-        border: 1px solid #ccc;
+        padding: 15px;
         border-radius: 8px;
+        background: #fafafa;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .task-item {
-        padding: 5px;
-        border-bottom: 1px solid #eee;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        font-size: 0.95rem;
     }
 
-    .task-item:last-child {
-        border-bottom: none;
-    }
+        .task-item:last-child {
+            border-bottom: none;
+        }
 
     .export-controls {
-                display: flex;
-
-        justify-content: center;
-        gap: 10px;
-        margin: 10px 0;
+        text-align: center;
+        margin-top: 20px;
     }
-</style>
 
+    .btn-export {
+        background-color: #1d6f42;
+        color: white;
+        padding: 10px 16px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .btn-export:hover {
+            background-color: #14532d;
+        }
+
+    .date-inputs {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+</style>
 <div class="calendar-container">
     <div>
+        <!-- Nawigacja -->
         <div class="calendar-buttons">
-            <button @onclick="PreviousYear">«</button>
-            <button @onclick="PreviousMonth">‹</button>
-            <span>@currentDate.ToString("MMMM yyyy")</span>
-            <button @onclick="NextMonth">›</button>
-            <button @onclick="NextYear">»</button>
+            <button class="btn-nav" @onclick="PreviousYear" title="Poprzedni rok">
+                <i class="bi bi-chevron-double-left"></i>
+            </button>
+            <button class="btn-nav" @onclick="PreviousMonth" title="Poprzedni miesiąc">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <span class="calendar-title">@currentDate.ToString("MMMM yyyy", new System.Globalization.CultureInfo("pl-PL"))</span>
+
+            <button class="btn-nav" @onclick="NextMonth" title="Następny miesiąc">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="btn-nav" @onclick="NextYear" title="Następny rok">
+                <i class="bi bi-chevron-double-right"></i>
+            </button>
         </div>
 
+        <!-- Kalendarz -->
         <table class="calendar">
             <thead>
                 <tr>
-                    <th>Pn</th><th>Wt</th><th>Śr</th><th>Cz</th><th>Pt</th><th>So</th><th>Nd</th>
+                    <th>Pn</th>
+                    <th>Wt</th>
+                    <th>Śr</th>
+                    <th>Cz</th>
+                    <th>Pt</th>
+                    <th>So</th>
+                    <th>Nd</th>
                 </tr>
             </thead>
             <tbody>
@@ -94,6 +167,7 @@
                         @foreach (var day in week)
                         {
                             <td @onclick="() => SelectDate(day)"
+                                class="@(day.Month != currentDate.Month ? "other-month" : "") @(day.Date == today ? "today" : "")"
                                 style="background-color:@GetBackgroundColor(day)">
                                 @day.Day
                             </td>
@@ -103,40 +177,44 @@
             </tbody>
         </table>
 
+        <!-- Lista timerów -->
         @if (selectedDate.HasValue)
         {
             <div class="task-list">
-                <h4>Timery na @selectedDate.Value.ToShortDateString()</h4>
+                <h4><i class="bi bi-clock-history"></i> Timery na @selectedDate.Value.ToShortDateString()</h4>
                 @if (TimersForSelectedDate.Any())
                 {
                     @foreach (var timer in TimersForSelectedDate)
                     {
                         <div class="task-item">
-                           Start: @timer.StartTime.ToString("yyyy-MM-dd HH:mm") <br>
-                           Koniec: @timer.EndTime.ToString("yyyy-MM-dd HH:mm")  <br>
-                           Czas: @((timer.EndTime - timer.StartTime).ToString(@"hh\:mm\:ss"))
+                            <i class="bi bi-stopwatch"></i> Start: @timer.StartTime.ToString(@"hh\:mm\:ss") <br>
+                            <i class="bi bi-flag"></i> Koniec: @timer.EndTime.ToString(@"hh\:mm\:ss") <br>
+                            <i class="bi bi-hourglass-split"></i> Czas: @((timer.EndTime - timer.StartTime).ToString(@"hh\:mm\:ss"))
                         </div>
                     }
                 }
                 else
                 {
-                    <div>Brak timerów na ten dzień.</div>
+                    <div><i class="bi bi-x-circle"></i> Brak timerów na ten dzień.</div>
                 }
             </div>
         }
 
+        <!-- Eksport -->
         <div class="export-controls">
-            <InputDate @bind-Value="exportFrom" />
-            <InputDate @bind-Value="exportTo" />
-            
+            <div class="date-inputs">
+                <label>Od:</label>
+                <InputDate @bind-Value="exportFrom" />
+                <label>Do:</label>
+                <InputDate @bind-Value="exportTo" />
+            </div>
+            <button class="btn-export" @onclick="ExportToExcel">
+                <i class="bi bi-file-earmark-excel"></i> Eksportuj do Excela
+            </button>
         </div>
-        <div class="export-controls">
-
-            <button @onclick="ExportToExcel">Eksportuj do Excela</button>      
-        </div>
-
     </div>
 </div>
+
 
 @code {
     DateTime currentDate = DateTime.Today;
@@ -147,6 +225,10 @@
     DateTime exportTo = DateTime.Today;
 
     List<TaskTimerModel> AllTimers = new();
+    List<TaskModel> AllTasks = new();
+
+    List<WorkTime.Abstractions.TaskTimerModel> AllTimersForExport = new();
+    List<WorkTime.Abstractions.TaskModel> AllTasksForExport = new();
 
     IEnumerable<TaskTimerModel> TimersForSelectedDate => selectedDate.HasValue
         ? AllTimers.Where(t => t.StartTime.Date == selectedDate.Value.Date)
@@ -176,47 +258,78 @@
         return "#ff8a80"; // czerwony jasny
     }
 
-    @code {
-        // Add the required namespace for accessing FileSystem
-        @using System.IO;
-        @using ClosedXML.Excel
-        
-        async Task ExportToExcel()
-        {
-            var filtered = AllTimers
-                .Where(t => t.StartTime.Date >= exportFrom.Date && t.StartTime.Date <= exportTo.Date)
-                .OrderBy(t => t.StartTime)
-                .ToList();
 
-            // Replace FileSystem.AppDataDirectory with a valid directory path
-            var appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var filePath = Path.Combine(appDataDirectory, $"TaskTimers_{exportFrom:yyyyMMdd}_{exportTo:yyyyMMdd}.xlsx");
 
-            using var workbook = new ClosedXML.Excel.XLWorkbook();
-            var ws = workbook.AddWorksheet("Timery");
-            ws.Cell(1, 1).Value = "Lp.";
-            ws.Cell(1, 2).Value = "TaskID";
-            ws.Cell(1, 3).Value = "Start";
-            ws.Cell(1, 4).Value = "Koniec";
-            ws.Cell(1, 5).Value = "Czas trwania";
+    async Task ExportToExcel()
+    {
+        var result = await ApiService.GetProtectedDataAsync("/api/tasks/user/");
 
-            for (int i = 0; i < filtered.Count; i++)
+        AllTimersForExport = AllTimers
+            .Select(t => new WorkTime.Abstractions.TaskTimerModel
             {
-                var t = filtered[i];
-                ws.Cell(i + 2, 1).Value = i + 1;
-                ws.Cell(i + 2, 2).Value = t.TaskID;
-                ws.Cell(i + 2, 3).Value = t.StartTime.ToString("yyyy-MM-dd HH:mm");
-                ws.Cell(i + 2, 4).Value = t.EndTime.ToString("yyyy-MM-dd HH:mm");
-                ws.Cell(i + 2, 5).Value = (t.EndTime - t.StartTime).ToString(@"hh\:mm");
-            }
-
-            ws.Columns().AdjustToContents();
-            workbook.SaveAs(filePath);
-
-           // await Application.Current.MainPage.DisplayAlert("Eksport zakończony", $"Plik zapisano: {filePath}", "OK");
-        }
+                Id = t.Id,
+                UserID = t.UserID,
+                TaskID = t.TaskID,
+                DateTimeCreated = t.DateTimeCreated,
+                StartTime = t.StartTime,
+                EndTime = t.EndTime
+            }).OrderBy(t => t.StartTime)
+            .ToList();
+            AllTasksForExport = AllTasks
+                .Select(t => new WorkTime.Abstractions.TaskModel
+                {
+                    completed = t.completed,
+                    dateTimeCreated = t.dateTimeCreated,
+                    description = t.description,
+                    // Poprawka: rzutowanie z DateTime? na DateTime z obsługą null
+                    dueDate = t.dueDate.HasValue ? t.dueDate.Value : default,
+                    id = t.id,
+                    status = (WorkTime.Abstractions.EnumStatus)t.status,
+                    timePassed = t.timePassed,
+                    timeStart = t.timeStart,
+                    title = t.title,
+                }).OrderBy(t => t.timeStart)
+                .ToList();
+        await exportToExcel.ExportToExcel(AllTasksForExport, AllTimersForExport, exportFrom, exportTo);
     }
-     protected override async Task OnInitializedAsync()
+
+
+    // var filtered = AllTimers
+    //     .Where(t => t.StartTime.Date >= exportFrom.Date && t.StartTime.Date <= exportTo.Date)
+    //     .OrderBy(t => t.StartTime)
+    //     .ToList();
+
+    // Replace FileSystem.AppDataDirectory with a valid directory path
+    // var appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+    // var filePath = Path.Combine(appDataDirectory, $"TaskTimers_{exportFrom:yyyyMMdd}_{exportTo:yyyyMMdd}.xlsx");
+
+    // using var workbook = new ClosedXML.Excel.XLWorkbook();
+    // var ws = workbook.AddWorksheet("Timery");
+    // ws.Cell(1, 1).Value = "Lp.";
+    // ws.Cell(1, 2).Value = "TaskID";
+    // ws.Cell(1, 3).Value = "Start";
+    // ws.Cell(1, 4).Value = "Koniec";
+    // ws.Cell(1, 5).Value = "Czas trwania";
+
+    // for (int i = 0; i < filtered.Count; i++)
+    // {
+    //     var t = filtered[i];
+    //     ws.Cell(i + 2, 1).Value = i + 1;
+    //     ws.Cell(i + 2, 2).Value = t.TaskID;
+    //     ws.Cell(i + 2, 3).Value = t.StartTime.ToString("yyyy-MM-dd HH:mm");
+    //     ws.Cell(i + 2, 4).Value = t.EndTime.ToString("yyyy-MM-dd HH:mm");
+    //     ws.Cell(i + 2, 5).Value = (t.EndTime - t.StartTime).ToString(@"hh\:mm");
+    // }
+
+    // ws.Columns().AdjustToContents();
+    // workbook.SaveAs(filePath);
+
+    // await Application.Current.MainPage.DisplayAlert("Eksport zakończony", $"Plik zapisano: {filePath}", "OK");
+
+
+
+
+    protected override async Task OnInitializedAsync()
     {
         var result = await ApiService.GetProtectedDataWithoutUserIdAsync("/api/TaskTimers");
 
@@ -228,6 +341,16 @@
                 AllTimers = deserializedTask;
             }
 
+        }
+        result = await ApiService.GetProtectedDataAsync("/api/tasks/user/");
+
+        if (!string.IsNullOrEmpty(result))
+        {
+            var deserializedTask = JsonSerializer.Deserialize<List<TaskModel>>(result);
+            if (deserializedTask != null)
+            {
+                AllTasks = deserializedTask;
+            }
         }
     }
     IEnumerable<List<DateTime>> GetWeeks()

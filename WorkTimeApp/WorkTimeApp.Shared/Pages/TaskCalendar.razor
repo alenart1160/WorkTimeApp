@@ -9,94 +9,133 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        font-family: Arial, sans-serif;
     }
+
+    .calendar-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .calendar-title {
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 0 10px;
+        color: #333;
+    }
+
+    .btn-nav {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .btn-nav:hover {
+            background-color: #357abd;
+        }
 
     .calendar {
         border-collapse: collapse;
-        font-size: 1.2em;
+        font-size: 1.1rem;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-        .calendar th, .calendar td {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            padding: 5px;
-            border: 1px solid #ccc;
-            position: relative;
+        .calendar th {
+            background: #4a90e2;
+            color: white;
+            padding: 10px;
         }
 
         .calendar td {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            padding: 5px;
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            transition: background 0.3s;
+            border: 1px solid #ddd;
+            position: relative;
         }
 
             .calendar td:hover {
-                background-color: #e0e0e0;
+                background: rgba(0,0,0,0.05);
             }
 
-            .calendar td.selected {
-                background-color: #2196f3;
-                color: white;
-            }
-
-            .calendar td.today {
-                border: 2px solid red;
-            }
-
-            .calendar td .dot {
-                width: 6px;
-                height: 6px;
-                background-color: #2196f3;
-                border-radius: 50%;
-                position: absolute;
-                bottom: 5px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-    .calendar-buttons {
-        text-align: center;
-        margin-bottom: 10px;
+    .selected {
+        background-color: #4a90e2 !important;
+        color: white !important;
     }
 
-        .calendar-buttons button {
-            margin: 0 5px;
-            padding: 5px 10px;
-            font-size: 1em;
-        }
+    .today {
+        border: 2px solid #e53935 !important;
+        font-weight: bold;
+    }
 
-    .text-muted {
-        color: gray;
+    .other-month {
+        color: #bbb;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        background-color: #2196f3;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 6px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .task-list {
-        max-width: 400px;
+        max-width: 450px;
         margin: 20px auto;
-        padding: 10px;
-        border: 1px solid #ccc;
+        padding: 15px;
         border-radius: 8px;
+        background: #fafafa;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .task-item {
-        padding: 5px;
-        border-bottom: 1px solid #eee;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        font-size: 0.95rem;
     }
 
         .task-item:last-child {
             border-bottom: none;
         }
-</style>
 
+</style>
 <div class="calendar-container">
     <div>
+        <!-- Nawigacja -->
         <div class="calendar-buttons">
-            <button @onclick="PreviousYear">«</button>
-            <button @onclick="PreviousMonth">‹</button>
-            <span>@currentDate.ToString("MMMM yyyy")</span>
-            <button @onclick="NextMonth">›</button>
-            <button @onclick="NextYear">»</button>
+            <button class="btn-nav" @onclick="PreviousYear" title="Poprzedni rok">
+                <i class="bi bi-chevron-double-left"></i>
+            </button>
+            <button class="btn-nav" @onclick="PreviousMonth" title="Poprzedni miesiąc">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <span class="calendar-title">@currentDate.ToString("MMMM yyyy", new System.Globalization.CultureInfo("pl-PL"))</span>
+            <button class="btn-nav" @onclick="NextMonth" title="Następny miesiąc">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="btn-nav" @onclick="NextYear" title="Następny rok">
+                <i class="bi bi-chevron-double-right"></i>
+            </button>
         </div>
 
+        <!-- Kalendarz -->
         <table class="calendar">
             <thead>
                 <tr>
@@ -129,24 +168,29 @@
             </tbody>
         </table>
 
+        <!-- Lista zadań -->
         @if (selectedDate.HasValue)
         {
             <div class="task-list">
-                <h4>Zadania na @selectedDate.Value.ToShortDateString()</h4>
+                <h4><i class="bi bi-list-task"></i> Zadania na @selectedDate.Value.ToShortDateString()</h4>
                 @if (TasksForSelectedDate.Any())
                 {
                     @foreach (var task in TasksForSelectedDate)
                     {
                         <div class="task-item">
-                            <strong>@task.title</strong> (priorytet: @task.priority, status: @task.status)
+                            <strong>@task.title</strong>
+                            <span class="badge bg-primary ms-2">priorytet: @task.priority</span>
+                            <span class="badge bg-secondary">
+                                @(task.status == EnumStatus.Completed ? "Zakończony" : (task.status == EnumStatus.Active ? "Aktywny" : "Nie zakończony"))
+                            </span>
                             <br />
-                            @task.description
+                            <small>@task.description</small>
                         </div>
                     }
                 }
                 else
                 {
-                    <div>Brak zadań na ten dzień.</div>
+                    <div><i class="bi bi-x-circle"></i> Brak zadań na ten dzień.</div>
                 }
             </div>
         }
@@ -161,8 +205,13 @@
     List<TaskModel> AllTasks = new();
 
     IEnumerable<TaskModel> TasksForSelectedDate => selectedDate.HasValue
-        ? AllTasks.Where(t => t.dueDate.Date == selectedDate.Value.Date)
+        ? AllTasks.Where(t => t.dueDate.HasValue && t.dueDate.Value.Date == selectedDate.Value.Date)
         : Enumerable.Empty<TaskModel>();
+
+    bool HasTasks(DateTime day)
+    {
+        return AllTasks.Any(t => t.dueDate.HasValue && t.dueDate.Value.Date == day.Date);
+    }
 
     void NextMonth() => currentDate = currentDate.AddMonths(1);
     void PreviousMonth() => currentDate = currentDate.AddMonths(-1);
@@ -186,10 +235,7 @@
         return classes;
     }
 
-    bool HasTasks(DateTime day)
-    {
-        return AllTasks.Any(t => t.dueDate.Date == day.Date);
-    }
+  
 
     IEnumerable<List<DateTime>> GetWeeks()
     {

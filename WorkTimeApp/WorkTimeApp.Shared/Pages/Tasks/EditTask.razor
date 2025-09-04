@@ -12,38 +12,60 @@
 @using WorkTimeApp.Shared.Model
 @using WorkTimeApp.Shared.Services
 
-<PageTitle>Edit Task</PageTitle>
+<PageTitle>Edycja zadania</PageTitle>
 
-<h1>Editor</h1>
+<div class="d-flex justify-content-center align-items-center" >
+    <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;">
+        <div class="text-center mb-3">
+            <h2 class="text-primary">
+                <i class="bi bi-pencil-square"></i> Edytuj zadanie
+            </h2>
+            <p class="text-muted">Wprowadź zmiany i zapisz</p>
+        </div>
 
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="alert alert-danger">@errorMessage</div>
+        }
 
-<EditForm Model="@task" OnValidSubmit="HandleValidSubmit">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
+        <EditForm Model="@task" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
 
-    <div>
-        <label for="title">Title:</label>
-        <InputText id="title" @bind-Value="task.title" class="form-control" />
+            <div class="mb-3">
+                <label for="title" class="form-label">Tytuł</label>
+                <InputText id="title" @bind-Value="task.title" class="form-control" placeholder="Wpisz tytuł" />
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Opis</label>
+                <InputTextArea id="description" @bind-Value="task.description" class="form-control" placeholder="Dodaj opis" />
+            </div>
+
+            <div class="mb-3">
+                <label for="dueDate" class="form-label">Termin</label>
+                <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label for="priority" class="form-label">Priorytet</label>
+                <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
+            </div>
+
+            <div class="d-grid gap-2 mt-4">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save"></i> Zapisz zmiany
+                </button>
+                <button type="button" class="btn btn-secondary" @onclick="GoBack">
+                    <i class="bi bi-arrow-left"></i> Powrót
+                </button>
+            </div>
+        </EditForm>
     </div>
+</div>
 
-    <div>
-        <label for="description">Description:</label>
-        <InputTextArea id="description" @bind-Value="task.description" class="form-control" />
-    </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <div>
-        <label for="dueDate">Due Date:</label>
-        <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control" />
-    </div>
-
-    <div>
-        <label for="priority">Priority:</label>
-        <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
-    </div>
-    <br />
-    <input type="submit" class="btn btn-primary" value="Save" />
-</EditForm>
-<button class="btn btn-primary" @onclick="GoBack">Go Back</button>
 
 @code {
     [Parameter]
@@ -51,6 +73,7 @@
 
     private TaskModel task = new TaskModel();
     static HttpClient httpClient = new HttpClient();
+    private string errorMessage = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
@@ -69,6 +92,17 @@
 
     private async void HandleValidSubmit()
     {
+        if (string.IsNullOrWhiteSpace(task.title))
+        {
+            errorMessage = "Tytuł jest wymagany.";
+            return;
+        }
+        // Poprawka: DateTime nie może być null, więc sprawdzamy domyślną wartość
+        if (task.dueDate == default(DateTime))
+        {
+            errorMessage = "Termin jest wymagany.";
+            return;
+        }
         var result = await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + Taskid, task);
 
         await JSRuntime.InvokeVoidAsync("history.back");
