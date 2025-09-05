@@ -205,12 +205,12 @@
     List<TaskModel> AllTasks = new();
 
     IEnumerable<TaskModel> TasksForSelectedDate => selectedDate.HasValue
-        ? AllTasks.Where(t => t.dueDate.HasValue && t.dueDate.Value.Date == selectedDate.Value.Date)
+        ? AllTasks.Where(t => t.dueDate == selectedDate.Value.Date)
         : Enumerable.Empty<TaskModel>();
 
     bool HasTasks(DateTime day)
     {
-        return AllTasks.Any(t => t.dueDate.HasValue && t.dueDate.Value.Date == day.Date);
+        return AllTasks.Any(t => t.dueDate == day.Date);
     }
 
     void NextMonth() => currentDate = currentDate.AddMonths(1);

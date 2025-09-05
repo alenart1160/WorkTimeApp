@@ -176,7 +176,18 @@
                 }
             </tbody>
         </table>
-
+        <!-- Eksport -->
+        <div class="export-controls">
+            <div class="date-inputs">
+                <label>Od:</label>
+                <InputDate @bind-Value="exportFrom" />
+                <label>Do:</label>
+                <InputDate @bind-Value="exportTo" />
+            </div>
+            <button class="btn-export" @onclick="ExportToExcel">
+                <i class="bi bi-file-earmark-excel"></i> Eksportuj do Excela
+            </button>
+        </div>
         <!-- Lista timerów -->
         @if (selectedDate.HasValue)
         {
@@ -200,18 +211,7 @@
             </div>
         }
 
-        <!-- Eksport -->
-        <div class="export-controls">
-            <div class="date-inputs">
-                <label>Od:</label>
-                <InputDate @bind-Value="exportFrom" />
-                <label>Do:</label>
-                <InputDate @bind-Value="exportTo" />
-            </div>
-            <button class="btn-export" @onclick="ExportToExcel">
-                <i class="bi bi-file-earmark-excel"></i> Eksportuj do Excela
-            </button>
-        </div>
+
     </div>
 </div>
 
@@ -281,8 +281,7 @@
                     completed = t.completed,
                     dateTimeCreated = t.dateTimeCreated,
                     description = t.description,
-                    // Poprawka: rzutowanie z DateTime? na DateTime z obsługą null
-                    dueDate = t.dueDate.HasValue ? t.dueDate.Value : default,
+                    dueDate =  t.dueDate,
                     id = t.id,
                     status = (WorkTime.Abstractions.EnumStatus)t.status,
                     timePassed = t.timePassed,

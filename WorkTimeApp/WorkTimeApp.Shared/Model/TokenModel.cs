@@ -10,7 +10,7 @@ namespace WorkTimeApp.Shared.Model
     public class TokenModel
     {
         // Ensure the Token property is public to resolve the CS0122 error  
-        public string Token { get; set; }
+        public required string Token { get; set; }
         public int Id { get; set; }
     }
 }

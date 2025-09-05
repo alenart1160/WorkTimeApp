@@ -13,7 +13,7 @@ namespace WorkTimeApp.Shared.Model
         public long userID { get; set; }
         public string? title { get; set; }
         [Required(ErrorMessage = "Termin jest wymagany.")]
-        public DateTime? dueDate { get; set; }
+        public DateTime dueDate { get; set; }
         public int priority { get; set; }
         public string? description { get; set; }
         public DateTime dateTimeCreated { get; set; }
