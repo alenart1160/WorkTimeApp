@@ -26,7 +26,7 @@ namespace WorkTimeApp.Shared.Model
         public string? Email { get; set; }
         public string? NIP { get; set; }
 
-        public event Action OnChange = delegate { }; // Initialize with an empty delegate to avoid null issues.
+        public event Action OnChange = delegate { };
 
         private void NotifyStateChanged() => OnChange.Invoke();
     }

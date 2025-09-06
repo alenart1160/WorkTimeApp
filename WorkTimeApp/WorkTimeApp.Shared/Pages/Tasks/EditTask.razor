@@ -34,22 +34,22 @@
 
             <div class="mb-3">
                 <label for="title" class="form-label">Tytuł</label>
-                <InputText id="title" @bind-Value="task.title" class="form-control" placeholder="Wpisz tytuł" />
+                <InputText id="title" @bind-Value="task.Title" class="form-control" placeholder="Wpisz tytuł" />
             </div>
 
             <div class="mb-3">
                 <label for="description" class="form-label">Opis</label>
-                <InputTextArea id="description" @bind-Value="task.description" class="form-control" placeholder="Dodaj opis" />
+                <InputTextArea id="description" @bind-Value="task.Description" class="form-control" placeholder="Dodaj opis" />
             </div>
 
             <div class="mb-3">
                 <label for="dueDate" class="form-label">Termin</label>
-                <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control" />
+                <InputDate id="dueDate" @bind-Value="task.DueDate" class="form-control" />
             </div>
 
             <div class="mb-3">
                 <label for="priority" class="form-label">Priorytet</label>
-                <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
+                <InputNumber id="priority" @bind-Value="task.Priority" class="form-control" />
             </div>
 
             <div class="d-grid gap-2 mt-4">
@@ -92,13 +92,13 @@
 
     private async void HandleValidSubmit()
     {
-        if (string.IsNullOrWhiteSpace(task.title))
+        if (string.IsNullOrWhiteSpace(task.Title))
         {
             errorMessage = "Tytuł jest wymagany.";
             return;
         }
         // Poprawka: DateTime nie może być null, więc sprawdzamy domyślną wartość
-        if (task.dueDate == default(DateTime))
+        if (task.DueDate == default(DateTime))
         {
             errorMessage = "Termin jest wymagany.";
             return;

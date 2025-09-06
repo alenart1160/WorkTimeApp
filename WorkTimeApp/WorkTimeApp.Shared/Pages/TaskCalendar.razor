@@ -178,13 +178,13 @@
                     @foreach (var task in TasksForSelectedDate)
                     {
                         <div class="task-item">
-                            <strong>@task.title</strong>
-                            <span class="badge bg-primary ms-2">priorytet: @task.priority</span>
+                            <strong>@task.Title</strong>
+                            <span class="badge bg-primary ms-2">priorytet: @task.Priority</span>
                             <span class="badge bg-secondary">
-                                @(task.status == EnumStatus.Completed ? "Zakończony" : (task.status == EnumStatus.Active ? "Aktywny" : "Nie zakończony"))
+                                @(task.Status == EnumStatus.Completed ? "Zakończony" : (task.Status == EnumStatus.Active ? "Aktywny" : "Nie zakończony"))
                             </span>
                             <br />
-                            <small>@task.description</small>
+                            <small>@task.Description</small>
                         </div>
                     }
                 }
@@ -205,12 +205,12 @@
     List<TaskModel> AllTasks = new();
 
     IEnumerable<TaskModel> TasksForSelectedDate => selectedDate.HasValue
-        ? AllTasks.Where(t => t.dueDate == selectedDate.Value.Date)
+        ? AllTasks.Where(t =>  t.DueDate == selectedDate.Value.Date)
         : Enumerable.Empty<TaskModel>();
 
     bool HasTasks(DateTime day)
     {
-        return AllTasks.Any(t => t.dueDate == day.Date);
+        return AllTasks.Any(t => t.DueDate == day.Date);
     }
 
     void NextMonth() => currentDate = currentDate.AddMonths(1);

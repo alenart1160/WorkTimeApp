@@ -22,10 +22,10 @@
                 <ValidationSummary />
 
                 <div class="mb-3">
-                    <label for="title" class="form-label">Tytuł:</label>
+                    <label for="Title" class="form-label">Tytuł:</label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-pencil-square"></i></span>
-                        <InputText id="title" @bind-Value="task.title" class="form-control" placeholder="Wprowadź tytuł zadania" />
+                        <InputText id="title" @bind-Value="task.Title" class="form-control" placeholder="Wprowadź tytuł zadania" />
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@
                     <label for="description" class="form-label">Opis:</label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-card-text"></i></span>
-                        <InputTextArea id="description" @bind-Value="task.description" class="form-control" placeholder="Dodaj opis zadania" />
+                        <InputTextArea id="description" @bind-Value="task.Description" class="form-control" placeholder="Dodaj opis zadania" />
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@
                     <label for="dueDate" class="form-label">Termin realizacji:</label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
-                        <InputDate id="dueDate" @bind-Value="task.dueDate" class="form-control" />
+                        <InputDate id="dueDate" @bind-Value="task.DueDate" class="form-control" />
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@
                     <label for="priority" class="form-label">Priorytet:</label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-flag-fill"></i></span>
-                        <InputNumber id="priority" @bind-Value="task.priority" class="form-control" />
+                        <InputNumber id="priority" @bind-Value="task.Priority" class="form-control" />
                     </div>
                 </div>
 
@@ -103,9 +103,9 @@
     private TaskModel task = new TaskModel()
     {
 
-        dueDate = DateTime.Now,
-        dateTimeCreated = DateTime.Now,
-        status = EnumStatus.InComplete
+        DueDate = DateTime.Now,
+        DateTimeCreated = DateTime.Now,
+        Status = EnumStatus.InComplete
     };
 
     static HttpClient httpClient = new HttpClient();
@@ -113,7 +113,7 @@
 
     private async void HandleValidSubmit()
     {
-        task.userID = Convert.ToInt64(Userid);
+        task.UserID = Convert.ToInt64(Userid);
         await ApiService.PostProtectedDataAsync<TaskModel>("/api/tasks/", task);
         await JSRuntime.InvokeVoidAsync("history.back");
     }

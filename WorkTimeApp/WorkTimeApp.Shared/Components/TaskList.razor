@@ -7,27 +7,27 @@
 @inject ApiService ApiService
 
 <div class="task-list-container">
-    @foreach (TaskModel task in FilteredTasks.OrderByDescending(o => o.priority))
+    @foreach (TaskModel task in FilteredTasks.OrderByDescending(o => o.Priority))
     {
         <div class="task-card">
             <div class="task-header">
-                <h4>@task.title</h4>
-                <span class="badge bg-primary">priorytet: @task.priority</span>
-                <span class="badge @(task.status == EnumStatus.Completed ? "bg-success" : (task.status == EnumStatus.Active ? "bg-warning" : "bg-secondary"))">
-                    @(task.status == EnumStatus.Completed ? "Zakończony" : (task.status == EnumStatus.Active ? "Aktywny" : "Nie zakończony"))
+                <h4>@task.Title</h4>
+                <span class="badge bg-primary">priorytet: @task.Priority</span>
+                <span class="badge @(task.Status == EnumStatus.Completed ? "bg-success" : (task.Status == EnumStatus.Active ? "bg-warning" : "bg-secondary"))">
+                    @(task.Status == EnumStatus.Completed ? "Zakończony" : (task.Status == EnumStatus.Active ? "Aktywny" : "Nie zakończony"))
                 </span>
             </div>
             <div class="task-body">
-                <small class="text-muted">Termin: @(task.dueDate is DateTime dt ? dt.ToString("dd-MM-yyyy") : "")</small>
+                <small class="text-muted">Termin: @(task.DueDate is DateTime dt ? dt.ToString("dd-MM-yyyy") : "")</small>
                 <br />
                 <small class="text-muted">
                     Czas: @GetLiveTime(task)
                 </small>
             </div>
             <div class="task-footer">
-                @if (task.status == EnumStatus.InComplete)
+                @if (task.Status == EnumStatus.InComplete)
                 {
-                    <button class="btn-action edit" @onclick="() => EditTask(task.id)">
+                    <button class="btn-action edit" @onclick="() => EditTask(task.Id)">
                         <i class="bi bi-pencil"></i>
                     </button>
                     <button class="btn-action start" @onclick="() => StartTask(task)">
@@ -37,13 +37,13 @@
                         <i class="bi bi-check2-circle"></i>
                     </button>
                 }
-                @if (task.status == EnumStatus.Active)
+                @if (task.Status == EnumStatus.Active)
                 {
                     <button class="btn-action stop" @onclick="() => StopTask(task)">
                         <i class="bi bi-stop-fill"></i>
                     </button>
                 }
-                <button class="btn-action history" @onclick="() => TaskHistory(task.id)">
+                <button class="btn-action history" @onclick="() => TaskHistory(task.Id)">
                     <i class="bi bi-clock-history"></i>
                 </button>
             </div>
@@ -180,42 +180,42 @@
 
     private string GetLiveTime(TaskModel task)
     {
-        if (task.status == EnumStatus.Active && task.timeStart != default)
+        if (task.Status == EnumStatus.Active && task.TimeStart != default)
         {
-            TimeSpan passed = string.IsNullOrEmpty(task.timePassed) ? TimeSpan.Zero : TimeSpan.Parse(task.timePassed);
-            TimeSpan current = DateTime.Now - task.timeStart;
+            TimeSpan passed = string.IsNullOrEmpty(task.TimePassed) ? TimeSpan.Zero : TimeSpan.Parse(task.TimePassed);
+            TimeSpan current = DateTime.Now - task.TimeStart;
             TimeSpan total = passed + current;
             return total.ToString(@"hh\:mm\:ss");
         }
         else
         {
-            return string.IsNullOrEmpty(task.timePassed) ? "00:00:00" : task.timePassed;
+            return string.IsNullOrEmpty(task.TimePassed) ? "00:00:00" : task.TimePassed;
         }
     }
 
     private async Task StartTask(TaskModel task)
     {
-        task.status = EnumStatus.Active;
-        task.timeStart = DateTime.Now;
-        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
+        task.Status = EnumStatus.Active;
+        task.TimeStart = DateTime.Now;
+        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.Id, task);
     }
 
     private async Task StopTask(TaskModel task)
     {
-        task.status = EnumStatus.InComplete;
-        var existingTime = string.IsNullOrEmpty(task.timePassed) ? TimeSpan.Zero : TimeSpan.Parse(task.timePassed);
-        task.timePassed = (existingTime + (DateTime.Now - task.timeStart)).ToString(@"hh\:mm\:ss");
+        task.Status = EnumStatus.InComplete;
+        var existingTime = string.IsNullOrEmpty(task.TimePassed) ? TimeSpan.Zero : TimeSpan.Parse(task.TimePassed);
+        task.TimePassed = (existingTime + (DateTime.Now - task.TimeStart)).ToString(@"hh\:mm\:ss");
 
         var taskTimerModel = new TaskTimerModel
         {
-            StartTime = task.timeStart,
+            StartTime = task.TimeStart,
             EndTime = DateTime.Now,
-            TaskID = task.id,
+            TaskID = task.Id,
             UserID = Userid,
             DateTimeCreated = DateTime.Now
         };
 
-        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
+        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.Id, task);
         await ApiService.PostProtectedDataAsync<TaskTimerModel>("/api/tasktimers/", taskTimerModel);
     }
 
@@ -224,9 +224,9 @@
 
     private async Task CompleteTask(TaskModel task)
     {
-        task.status = EnumStatus.Completed;
-        task.completed = true;
-        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.id, task);
+        task.Status = EnumStatus.Completed;
+        task.Completed = true;
+        await ApiService.PutProtectedDataAsync<TaskModel>("/api/tasks/" + task.Id, task);
     }
 
     public void Dispose()

@@ -176,18 +176,7 @@
                 }
             </tbody>
         </table>
-        <!-- Eksport -->
-        <div class="export-controls">
-            <div class="date-inputs">
-                <label>Od:</label>
-                <InputDate @bind-Value="exportFrom" />
-                <label>Do:</label>
-                <InputDate @bind-Value="exportTo" />
-            </div>
-            <button class="btn-export" @onclick="ExportToExcel">
-                <i class="bi bi-file-earmark-excel"></i> Eksportuj do Excela
-            </button>
-        </div>
+
         <!-- Lista timerów -->
         @if (selectedDate.HasValue)
         {
@@ -211,7 +200,18 @@
             </div>
         }
 
-
+        <!-- Eksport -->
+        <div class="export-controls">
+            <div class="date-inputs">
+                <label>Od:</label>
+                <InputDate @bind-Value="exportFrom" />
+                <label>Do:</label>
+                <InputDate @bind-Value="exportTo" />
+            </div>
+            <button class="btn-export" @onclick="ExportToExcel">
+                <i class="bi bi-file-earmark-excel"></i> Eksportuj do Excela
+            </button>
+        </div>
     </div>
 </div>
 
@@ -278,55 +278,20 @@
             AllTasksForExport = AllTasks
                 .Select(t => new WorkTime.Abstractions.TaskModel
                 {
-                    completed = t.completed,
-                    dateTimeCreated = t.dateTimeCreated,
-                    description = t.description,
-                    dueDate =  t.dueDate,
-                    id = t.id,
-                    status = (WorkTime.Abstractions.EnumStatus)t.status,
-                    timePassed = t.timePassed,
-                    timeStart = t.timeStart,
-                    title = t.title,
+                    completed = t.Completed,
+                    dateTimeCreated = t.DateTimeCreated,
+                    description = t.Description,
+                    // Poprawka: rzutowanie z DateTime? na DateTime z Ibsługą null
+                    dueDate = t.DueDate,
+                    id = t.Id,
+                    status = (WorkTime.Abstractions.EnumStatus)t.Status,
+                    timePassed = t.TimePassed,
+                    timeStart = t.TimeStart,
+                    title = t.Title,
                 }).OrderBy(t => t.timeStart)
                 .ToList();
         await exportToExcel.ExportToExcel(AllTasksForExport, AllTimersForExport, exportFrom, exportTo);
     }
-
-
-    // var filtered = AllTimers
-    //     .Where(t => t.StartTime.Date >= exportFrom.Date && t.StartTime.Date <= exportTo.Date)
-    //     .OrderBy(t => t.StartTime)
-    //     .ToList();
-
-    // Replace FileSystem.AppDataDirectory with a valid directory path
-    // var appDataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-    // var filePath = Path.Combine(appDataDirectory, $"TaskTimers_{exportFrom:yyyyMMdd}_{exportTo:yyyyMMdd}.xlsx");
-
-    // using var workbook = new ClosedXML.Excel.XLWorkbook();
-    // var ws = workbook.AddWorksheet("Timery");
-    // ws.Cell(1, 1).Value = "Lp.";
-    // ws.Cell(1, 2).Value = "TaskID";
-    // ws.Cell(1, 3).Value = "Start";
-    // ws.Cell(1, 4).Value = "Koniec";
-    // ws.Cell(1, 5).Value = "Czas trwania";
-
-    // for (int i = 0; i < filtered.Count; i++)
-    // {
-    //     var t = filtered[i];
-    //     ws.Cell(i + 2, 1).Value = i + 1;
-    //     ws.Cell(i + 2, 2).Value = t.TaskID;
-    //     ws.Cell(i + 2, 3).Value = t.StartTime.ToString("yyyy-MM-dd HH:mm");
-    //     ws.Cell(i + 2, 4).Value = t.EndTime.ToString("yyyy-MM-dd HH:mm");
-    //     ws.Cell(i + 2, 5).Value = (t.EndTime - t.StartTime).ToString(@"hh\:mm");
-    // }
-
-    // ws.Columns().AdjustToContents();
-    // workbook.SaveAs(filePath);
-
-    // await Application.Current.MainPage.DisplayAlert("Eksport zakończony", $"Plik zapisano: {filePath}", "OK");
-
-
-
 
     protected override async Task OnInitializedAsync()
     {

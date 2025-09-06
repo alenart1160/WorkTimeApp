@@ -21,7 +21,7 @@
         </button>
     </div>
 
-    <p class="text-muted">Aktualnie aktywne zadania: <strong>@tasks.Count(t => !t.completed)</strong></p>
+    <p class="text-muted">Aktualnie aktywne zadania: <strong>@tasks.Count(t => !t.Completed)</strong></p>
 
     @if (tasks.Any())
     {
@@ -65,7 +65,7 @@
     [Parameter]
     public int Userid { get; set; }
 
-    private bool ActiveFilter(TaskModel task) => !task.completed;
+    private bool ActiveFilter(TaskModel task) => !task.Completed;
 
     public List<TaskModel> tasks = new();
 
