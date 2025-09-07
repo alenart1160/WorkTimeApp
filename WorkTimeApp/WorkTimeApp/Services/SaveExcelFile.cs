@@ -68,11 +68,7 @@ namespace WorkTimeApp.Services
                         await mainPage.DisplayAlert("Błąd", result.Exception?.Message ?? "Nie udało się zapisać pliku", "OK");
                     }
                 }
-                else
-                {
-                    // Fallback jeśli nie ma strony głównej
-                    // Możesz dodać logowanie lub inną obsługę błędu tutaj
-                }
+
             }
             else
             {
@@ -80,11 +76,6 @@ namespace WorkTimeApp.Services
                 if (mainPage != null)
                 {
                     await mainPage.DisplayAlert("Błąd", "FileSaver niedostępny", "OK");
-                }
-                else
-                {
-                    // Fallback jeśli nie ma strony głównej
-                    // Możesz dodać logowanie lub inną obsługę błędu tutaj
                 }
             }
         }

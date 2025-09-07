@@ -33,47 +33,46 @@ namespace WorkTimeApp.Shared.Pages
         }
         private async Task Submit()
         {
-            HttpStatusCode? request = null;
-            if (Email == null)
+            if (string.IsNullOrWhiteSpace(Email))
             {
-                ErrorMessage = "No email";
+                ErrorMessage = "Podaj email.";
+                return;
             }
             if (ConfirmPassword != Password)
             {
-                ErrorMessage = "Password is not valid";
+                ErrorMessage = "Has³a nie s¹ zgodne.";
+                return;
             }
 
             try
             {
-                // Create a new user
                 UserModel userModel = new UserModel()
                 {
                     Email = Email,
                     Login = Email
                 };
                 userModel.Password = passwordHasher.HashPassword(userModel, Password);
-                var httpClient = new HttpClient();
 
-                // Use the injected ApiService instance
-                var result = await ApiService.CreateAccountAsync("/api/users", userModel);
-             
+                HttpResponseMessage response = await ApiService.CreateAccountAsync("/api/users", userModel);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    ErrorMessage = "U¿ytkownik zosta³ utworzony.";
+                }
+                else if (response.StatusCode == HttpStatusCode.Conflict || response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    ErrorMessage = "U¿ytkownik z tym adresem email ju¿ istnieje.";
+                }
+                else
+                {
+                    // Mo¿esz odczytaæ treœæ odpowiedzi, jeœli chcesz wyœwietliæ szczegó³y b³êdu
+                    var content = await response.Content.ReadAsStringAsync();
+                    ErrorMessage = $"B³¹d podczas rejestracji: {content}";
+                }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-            }
-
-            if (request == HttpStatusCode.NotFound)
-            {
-                ErrorMessage = "The user with this email already exists";
-            }
-            else if (request == HttpStatusCode.Created)
-            {
-                ErrorMessage = "User created";
-            }
-            else
-            {
-                ErrorMessage = "Unknown error";
+                ErrorMessage = "B³¹d: " + e.Message;
             }
         }
     }

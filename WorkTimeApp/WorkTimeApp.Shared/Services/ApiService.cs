@@ -50,13 +50,10 @@ public class ApiService
         }
         return false;
     }
-    public async Task<string> CreateAccountAsync(string page, UserModel user)
+    public async Task<HttpResponseMessage> CreateAccountAsync(string page, UserModel user)
     {
-        // Correctly create an AuthenticationHeaderValue instance
-
         var response = await _httpClient.PostAsJsonAsync(BaseUrl + page, user);
-
-        return await response.Content.ReadAsStringAsync();
+        return response;
     }
 
     public async Task<string> GetProtectedDataAsync(string page)
